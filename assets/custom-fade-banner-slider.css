@@ -1,0 +1,118 @@
+.fade-banner-slider img {
+    width: 100%;
+    aspect-ratio: 2;
+}
+.fade-banner-slider .description {
+    position: absolute;
+    padding: 50px 50px 110px;
+}
+.fade-banner-slider .swiper-container {
+    position: relative;
+}
+.fade-banner-slider .swiper-slide {
+    position: relative;
+    display: flex;
+}
+.fade-banner-slider .banner--desktop-transparent {
+    background: transparent;
+}
+.fade-banner-slider .btn_trans {
+    background: transparent;
+}
+.fade-banner-slider h2 {
+    margin: 0;
+    line-height: 30px;
+}
+.fade-banner-slider .janpen-letter--spacing {
+    letter-spacing: -7px;
+}
+.fade-banner-slider .btn {
+    padding-top: 15px;
+}
+.fade-banner-slider .swiper-pagination  {
+    position: absolute;
+    bottom: 50px !important;
+    left: 50px !important;
+    display: flex;
+    width: auto;
+}
+.fade-banner-slider .swiper-pagination span {
+    width: 49px;
+    height: 2px;
+    border: 0;
+    background: #2B2922;
+    opacity: 1 !important;
+}
+.fade-banner-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background: #FAF5F5;
+}
+
+
+  
+    .banner__content--top-left {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  
+    .banner__content--top-center {
+      align-items: flex-start;
+      justify-content: center;
+    }
+  
+    .banner__content--top-right {
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+  
+    .banner__content--middle-left {
+      align-items: center;
+      justify-content: flex-start;
+    }
+  
+    .banner__content--middle-center {
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .banner__content--middle-right {
+      align-items: center;
+      justify-content: flex-end;
+    }
+  
+    .banner__content--bottom-left {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+  
+    .banner__content--bottom-center {
+      align-items: flex-end;
+      justify-content: center;
+    }
+  
+    .banner__content--bottom-right {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  
+
+  @media (max-width: 400px) {
+    .fade-banner-slider img {
+        aspect-ratio: 0.76;
+        object-fit: cover;
+    }
+    .fade-banner-slider .swiper-pagination span {
+        width: 30px;
+    }
+    .fade-banner-slider .swiper-pagination {
+        width: 50%;
+        bottom: 35px !important;
+        left: 25px !important;
+    }
+    .fade-banner-slider .description {
+        padding: 25px 25px 72px;
+    }
+  }
+
+  .fade-banner-image {
+    aspect-ratio: 2;
+  }

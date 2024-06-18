@@ -1,0 +1,67 @@
+
+<style>
+    .meltingpot .container {
+        position: relative;
+    }
+    .meltingpot .icon {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
+
+
+
+<div class="meltingpot">
+    <div class="container">
+        {% if section.settings.img %}
+            <img
+                srcset="
+                  {% if section.settings.img.width >= 350 %}{{ section.settings.img | image_url: width: 350 }} 350w,{% endif %}
+                  {% if section.settings.img.width >= 750 %}{{ section.settings.img | image_url: width: 750 }} 750w,{% endif %}
+                  {% if section.settings.img.width >= 1100 %}{{ section.settings.img | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if section.settings.img.width >= 1500 %}{{ section.settings.img | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if section.settings.img.width >= 2200 %}{{ section.settings.img | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if section.settings.img.width >= 3000 %}{{ section.settings.img | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ section.settings.img | image_url }} {{ section.settings.img.width }}w
+                "
+                src="{{ section.settings.img | image_url: width: 1100 }}"
+                loading="eager"
+                fetchpriority="high"
+                width="auto"
+                height="auto"
+                alt="{{ section.settings.img.alt | escape }}"
+              >
+              <div class="icon">
+                  {%  render 'meltingpot-icon' %}
+              </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "meltingpot",
+        "class": "section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "img",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "image_text",
+                "label": "Text",
+                "default": "MELTINGPOT"
+            }
+        ],
+        "presets": [
+            {
+                "name": "meltingpot"
+            }
+        ]
+    }
+{% endschema %}

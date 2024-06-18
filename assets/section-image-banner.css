@@ -94,7 +94,7 @@
   }
 
   .banner--large:not(.banner--adapt) {
-    min-height: 72rem;
+    min-height: 112rem;
   }
 
   .banner__content.banner__content--top-left {
@@ -489,4 +489,27 @@
   .banner--desktop-transparent .rte a:hover {
     color: currentColor;
   }
+}
+
+.banner__media img {
+  width: 50% !important;
+  height: 70% !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.banner__content .banner__box {
+  background: transparent;
+}
+.banner__content .banner__box .banner__text {
+  width: 50%;
+}
+
+.banner__buttons a {
+  background-color: transparent;
+  width: 170px;
+  height: 42px;
+}
+.banner__media {
+  background-color: transparent;
 }

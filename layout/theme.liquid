@@ -36,6 +36,11 @@
     {%- endif -%}
 
     {{ content_for_header }}
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="{{ 'c-swiper.js' | asset_url }}" defer="defer"></script>
+
 
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -47,7 +52,7 @@
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
-      {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+      {{ body_font_bold_italic | font_face: font_display: 'swap' }} 
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       {% for scheme in settings.color_schemes -%}
@@ -355,5 +360,6 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>

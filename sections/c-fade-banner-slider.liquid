@@ -1,0 +1,221 @@
+{{ 'custom-fade-banner-slider.css' |  asset_url |  stylesheet_tag }}
+{{ 'custom-fade-swiper.css' |  asset_url |  stylesheet_tag }}
+<script src="{{ 'c-swiper.js' | asset_url }}" defer="defer"></script>
+
+
+
+<div class="fade-banner-slider">
+    <div class="swiper-container swiper-fade-banner" >
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                <div class="swiper-slide banner__content--{{ block.settings.box_align }} color-{{ block.settings.color_scheme }}">
+                    {% if block.type == "slider" %}
+                        {% if block.settings.image %}
+                            <div class="fade-banner-image c-img">
+                                <img
+                                    srcset="
+                                    {% if block.settings.image.width >= 350 %}{{ block.settings.image | image_url: width: 350 }} 350w,{% endif %}
+                                    {% if block.settings.image.width >= 750 %}{{ block.settings.image | image_url: width: 750 }} 750w,{% endif %}
+                                    {% if block.settings.image.width >= 1100 %}{{ block.settings.image | image_url: width: 1100 }} 1100w,{% endif %}
+                                    {% if block.settings.image.width >= 1500 %}{{ block.settings.image | image_url: width: 1500 }} 1500w,{% endif %}
+                                    {% if block.settings.image.width >= 2200 %}{{ block.settings.image | image_url: width: 2200 }} 2200w,{% endif %}
+                                    {% if block.settings.image.width >= 3000 %}{{ block.settings.image | image_url: width: 3000 }} 3000w,{% endif %}
+                                    {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                                    "
+                                    src="{{ block.settings.image | image_url: width: 1100 }}"
+                                    loading="eager"
+                                    fetchpriority="high"
+                                    width="aut{o"
+                                    height="auto"
+                                    alt="{{ block.settings.image.alt | escape }}"
+                                >
+                            </div>
+                            <div class="description {% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+                                {% if block.settings.title %}
+                                    <h2 class="{{ block.settings.heading_size }}">{{ block.settings.title }}</h2>
+                                {% endif %}
+                                {% if block.settings.sub_title %}
+                                    <h2 class="janpen-letter--spacing {{ block.settings.heading_size }}">{{ block.settings.sub_title }}</h2>
+                                {% endif %}
+                                {%- if block.settings.btn_label != blank -%}
+                                    <div class="btn">
+                                        <a
+                                            {% if block.settings.btn_link == blank %}
+                                            role="link" aria-disabled="true"
+                                            {% else %}
+                                            href="{{ block.settings.btn_link }}"
+                                            {% endif %}
+                                            class="button{% if block.settings.button_style_secondary %} btn_trans button--secondary{% else %} button--primary{% endif %}"
+                                        >
+                                            {{- block.settings.btn_label | escape -}}
+                                        </a>
+                                    </div>
+                                {%- endif -%}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination swiper-pagination1"></div>
+    </div>
+</div>
+<input type="hidden" class="slider_range_delay" data-slider-range-delay="{{ section.settings.change_slides_speed |  times: 1000 }}">
+<input type="hidden" class="fade_effect_speed" data-fade-effect-speed="{{ section.settings.fade_effect_speed |  times: 1000 }}">
+
+
+
+{% schema %}
+    {
+        "name": "fade slider",
+        "class": "section",
+        "settings": [
+            {
+                "type": "range",
+                "id": "change_slides_speed",
+                "min": 3,
+                "max": 9,
+                "step": 2,
+                "unit": "s", 
+                "label": "slider delay",
+                "default": 5
+            },
+            {
+                "type": "range",
+                "id": "fade_effect_speed",
+                "min": 3,
+                "max": 9,
+                "step": 2,
+                "unit": "s",
+                "label": "fade effect speed",
+                "default": 5
+            }
+        ],
+        "blocks": [
+            {
+                "type": "slider",
+                "name": "Slider",
+                "settings": [
+                    {
+                        "type": "color_scheme",
+                        "id": "color_scheme",
+                        "label": "t:sections.all.colors.label",
+                        "default": "scheme-1"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "select",
+                        "id": "box_align",
+                        "options": [
+                            {
+                            "value": "top-left",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__1.label"
+                            },
+                            {
+                            "value": "top-center",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__2.label"
+                            },
+                            {
+                            "value": "top-right",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__3.label"
+                            },
+                            {
+                            "value": "middle-left",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__4.label"
+                            },
+                            {
+                            "value": "middle-center",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__5.label"
+                            },
+                            {
+                            "value": "middle-right",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__6.label"
+                            },
+                            {
+                            "value": "bottom-left",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__7.label"
+                            },
+                            {
+                            "value": "bottom-center",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__8.label"
+                            },
+                            {
+                            "value": "bottom-right",
+                            "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__9.label"
+                            }
+                        ],
+                        "default": "middle-center",
+                        "label": "t:sections.slideshow.blocks.slide.settings.box_align.label",
+                        "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "show_text_box",
+                        "label": "t:sections.slideshow.blocks.slide.settings.show_text_box.label",
+                        "default": true
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                    "type": "select",
+                    "id": "heading_size",
+                    "options": [
+                        {
+                        "value": "h2",
+                        "label": "t:sections.all.heading_size.options__1.label"
+                        },
+                        {
+                        "value": "h1",
+                        "label": "t:sections.all.heading_size.options__2.label"
+                        },
+                        {
+                        "value": "h0",
+                        "label": "t:sections.all.heading_size.options__3.label"
+                        }
+                    ],
+                    "default": "h1",
+                    "label": "t:sections.all.heading_size.label"
+                    },
+                    {
+                        "type": "text",
+                        "id": "sub_title",
+                        "label": "SubTitle"
+                    },
+                    {
+                        "type": "text",
+                        "id": "btn_label",
+                        "label": "Button label"
+                    },
+                    {
+                        "type": "url",
+                        "id": "btn_link",
+                        "label": "Button link"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "button_style_secondary",
+                        "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
+                        "default": false
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {   
+                "name": "fade slider",
+                "blocks": [
+                    {
+                        "type": "slider"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

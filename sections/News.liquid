@@ -1,0 +1,147 @@
+{{ 'custom-news.css' |  asset_url |  stylesheet_tag}}
+
+<div class="news">
+    <div class="page-width container color-{{ section.settings.color_scheme }}">
+        <div class="news-text-btn-blocks">
+            <div class="news-text-btn">
+                {% if section.settings.text %}
+                    <h2 class="text">{{ section.settings.text }}</h2>
+                {% endif %}
+                {%- if section.settings.btn_label != blank -%}
+                    <a
+                        {% if section.settings.btn_link == blank %}
+                        role="link" aria-disabled="true"
+                        {% else %}
+                        href="{{ section.settings.btn_link }}"
+                        {% endif %}
+                        class="button{% if section.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                    >
+                        {{- section.settings.btn_label | escape -}}
+                    </a>
+                {%- endif -%}
+            </div>
+    
+            <div class="news_blocks">
+                {% for block in section.blocks %}
+                    <div class="block">
+                        {% if block.type == "block" %}
+                            {% if block.settings.text %}
+                                <h3 class="block_text">{{ block.settings.text }}</h3>
+                            {% endif %}
+                            {% if block.settings.number %}
+                                <h3 class="block_number">{{ block.settings.number }}</h3>
+                            {% endif %}
+                            <div class="block_border--bottom"></div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="news-image-text">
+            <div class="new_image">
+                <img
+                    srcset="
+                      {% if section.settings.img.width >= 350 %}{{ section.settings.img | image_url: width: 350 }} 350w,{% endif %}
+                      {% if section.settings.img.width >= 750 %}{{ section.settings.img | image_url: width: 750 }} 750w,{% endif %}
+                      {% if section.settings.img.width >= 1100 %}{{ section.settings.img | image_url: width: 1100 }} 1100w,{% endif %}
+                      {% if section.settings.img.width >= 1500 %}{{ section.settings.img | image_url: width: 1500 }} 1500w,{% endif %}
+                      {% if section.settings.img.width >= 2200 %}{{ section.settings.img | image_url: width: 2200 }} 2200w,{% endif %}
+                      {% if section.settings.img.width >= 3000 %}{{ section.settings.img | image_url: width: 3000 }} 3000w,{% endif %}
+                      {{ section.settings.img | image_url }} {{ section.settings.img.width }}w
+                    "
+                    src="{{ section.settings.img | image_url: width: 1100 }}"
+                    loading="eager"
+                    fetchpriority="high"
+                    width="auto"
+                    height="auto"
+                    alt="{{ section.settings.img.alt | escape }}"
+                  >
+                  <div class="image_title-text">
+                      {% if section.settings.image_title %}
+                        <h2 class="image_title">{{ section.settings.image_title }}</h2>
+                      {% endif %}
+                      {% if section.settings.img_text %}
+                        <h3 class="image_text">{{ section.settings.img_text }}</h3>
+                      {% endif %}
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "news",
+        "class": "section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "img",
+                "label": "Image"
+            },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "t:sections.all.colors.label",
+                "default": "scheme-1"
+            },
+            {
+                "type": "text",
+                "id": "image_title",
+                "label": "Image Title",
+                "default": "LINE MAGAZINE"
+            },
+            {
+                "type": "text",
+                "id": "img_text",
+                "label": "Image text"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Title",
+                "default": "NEWS"
+            },
+            {
+                "type": "text",
+                "id": "btn_label",
+                "label": "Button label",
+                "default": "ALL"
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "Button link"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "block",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "text",
+                        "label": "text"
+                    },
+                    {
+                        "type": "text",
+                        "id": "number",
+                        "label": "Date",
+                        "default": "2024.00.00"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "news",
+                "blocks": [
+                    {
+                        "type": "block"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

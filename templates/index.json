@@ -1,60 +1,104 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "c_fade_banner_slider_aC3GAz": {
+      "type": "c-fade-banner-slider",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slider_Gj8wQX": {
+          "type": "slider",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "color_scheme": "scheme-3",
+            "image": "shopify:\/\/shop_images\/Mask_Group_15.png",
+            "box_align": "bottom-left",
+            "show_text_box": true,
+            "title": "No03 FACE\/LIP BALM",
+            "heading_size": "h2",
+            "sub_title": "フェイス&リップバーム",
+            "btn_label": "BUY",
+            "btn_link": "shopify:\/\/products\/no01-all-in-1-facetoner-オールインワン-フェイストナー",
+            "button_style_secondary": true
           }
         },
-        "button": {
-          "type": "buttons",
+        "slider_XY8cYK": {
+          "type": "slider",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "color_scheme": "",
+            "image": "shopify:\/\/shop_images\/DSC8525.jpg",
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "title": "",
+            "heading_size": "h1",
+            "sub_title": "",
+            "btn_label": "",
+            "btn_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slider_CGrFTK": {
+          "type": "slider",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify:\/\/shop_images\/Mask_Group_15.png",
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "title": "",
+            "heading_size": "h1",
+            "sub_title": "",
+            "btn_label": "",
+            "btn_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "slider_Dppwk6": {
+          "type": "slider",
+          "settings": {
+            "color_scheme": "",
+            "image": "shopify:\/\/shop_images\/Mask_Group_15.png",
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "title": "No03 FACE\/LIP BALM",
+            "heading_size": "h1",
+            "sub_title": "フェイス&リップバーム",
+            "btn_label": "BUY",
+            "btn_link": "shopify:\/\/products\/no01-all-in-1-facetoner-オールインワン-フェイストナー",
+            "button_style_secondary": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "slider_Gj8wQX",
+        "slider_XY8cYK",
+        "slider_CGrFTK",
+        "slider_Dppwk6"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/DSC8525.jpg",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "change_slides_speed": 3,
+        "fade_effect_speed": 5
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "SKIN",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
+        "collection": "skin",
+        "products_to_show": 12,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -63,14 +107,204 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 44,
         "padding_bottom": 36
+      }
+    },
+    "featured_collection_LNXQrB": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "WEAR",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "wear",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_76c6kX": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "FOOD",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "food",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_q37Ei3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "LIFE",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "life",
+        "products_to_show": 12,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_YLzP3g": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_bURiHN": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_eWqtWY": {
+          "type": "text",
+          "settings": {
+            "text": "自分を愛し、内なる声に耳を傾ける。自然のエネルギーで本来持っている力を引き出し、自分の意思で生きていけるように…日常に寄り添い、新しい可能性が生まれるよう。自由に… あなたらしく…",
+            "text_style": "body"
+          }
+        },
+        "buttons_4QdaYN": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "REDE MORE",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_bURiHN",
+        "text_eWqtWY",
+        "buttons_4QdaYN"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Image_3.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "featured_collection_Xg6iaP": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "FEATURED ITEMS",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-eb43ddbd-4e50-49b3-a511-4001218c1016",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "news_CrhbnB": {
+      "type": "News",
+      "blocks": {
+        "block_dk86aP": {
+          "type": "block",
+          "settings": {
+            "text": "",
+            "number": "2024.00.00"
+          }
+        }
+      },
+      "block_order": [
+        "block_dk86aP"
+      ],
+      "settings": {
+        "img": "shopify:\/\/shop_images\/a80da13e-85a0-4827-961e-3994e768d43b.png",
+        "color_scheme": "",
+        "image_title": "LINE MAGAZINE",
+        "img_text": "公式LINEよりメッセージを限定配信中！ご登録はこちら",
+        "text": "NEWS",
+        "btn_label": "ALL",
+        "btn_link": "shopify:\/\/collections\/food"
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "c_fade_banner_slider_aC3GAz",
+    "featured_collection",
+    "featured_collection_LNXQrB",
+    "featured_collection_76c6kX",
+    "featured_collection_q37Ei3",
+    "image_banner_YLzP3g",
+    "featured_collection_Xg6iaP",
+    "news_CrhbnB"
   ]
 }
