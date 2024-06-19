@@ -1,0 +1,117 @@
+<style>
+    .about-container {
+        position: relative;
+    }
+    .about-container  .text {
+        font-size: 40px;
+        margin: 0;
+        color: white;
+        letter-spacing: 0.05em;
+        line-height: 53px;
+        position: absolute;
+        bottom: 43px;
+        left: 50px;
+    }
+    .about .mobile-image {
+        display: none;
+    }
+    @media (max-width:768px) {
+        .about .mobile-image {
+            display: block;
+        }
+        .about .image {
+            display: none;
+        }
+        .about-container  .text {
+            font-size: 20px;
+            margin: 0;
+            color: white;
+            letter-spacing: 0.05em;
+            line-height: 27px;
+            position: absolute;
+            bottom: 31px;
+            left: 25px;
+        }
+    }
+</style>
+
+
+<div class="about">
+    <div class="about-container">
+        {% if section.settings.image %}
+            <img
+                srcset="
+                {% if section.settings.image.width >= 350 %}{{ section.settings.image | image_url: width: 350 }} 350w,{% endif %}
+                {% if section.settings.image.width >= 750 %}{{ section.settings.image | image_url: width: 750 }} 750w,{% endif %}
+                {% if section.settings.image.width >= 1100 %}{{ section.settings.image | image_url: width: 1100 }} 1100w,{% endif %}
+                {% if section.settings.image.width >= 1500 %}{{ section.settings.image | image_url: width: 1500 }} 1500w,{% endif %}
+                {% if section.settings.image.width >= 2200 %}{{ section.settings.image | image_url: width: 2200 }} 2200w,{% endif %}
+                {% if section.settings.image.width >= 3000 %}{{ section.settings.image | image_url: width: 3000 }} 3000w,{% endif %}
+                {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+                "
+                src="{{ section.settings.image | image_url: width: 1100 }}"
+                loading="eager"
+                fetchpriority="high"
+                width="auto"
+                height="auto"
+                alt="{{ section.settings.image.alt | escape }}"
+                class="image"
+            >
+        {% endif %}
+        {% if section.settings.mobile_image %}
+            <img
+                srcset="
+                {% if section.settings.mobile_image.width >= 350 %}{{ section.settings.mobile_image | image_url: width: 350 }} 350w,{% endif %}
+                {% if section.settings.mobile_image.width >= 750 %}{{ section.settings.mobile_image | image_url: width: 750 }} 750w,{% endif %}
+                {% if section.settings.mobile_image.width >= 1100 %}{{ section.settings.mobile_image | image_url: width: 1100 }} 1100w,{% endif %}
+                {% if section.settings.mobile_image.width >= 1500 %}{{ section.settings.mobile_image | image_url: width: 1500 }} 1500w,{% endif %}
+                {% if section.settings.mobile_image.width >= 2200 %}{{ section.settings.mobile_image | image_url: width: 2200 }} 2200w,{% endif %}
+                {% if section.settings.mobile_image.width >= 3000 %}{{ section.settings.mobile_image | image_url: width: 3000 }} 3000w,{% endif %}
+                {{ section.settings.mobile_image | image_url }} {{ section.settings.mobile_image.width }}w
+                "
+                src="{{ section.settings.mobile_image | image_url: width: 1100 }}"
+                loading="eager"
+                fetchpriority="high"
+                width="auto"
+                height="auto"
+                alt="{{ section.settings.mobile_image.alt | escape }}"
+                class="mobile-image"
+            >
+        {% endif %}
+        {% if section.settings.text %}
+            <h1 class="text">
+                {{ section.settings.text }}
+            </h1>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "about banner",
+        "class": "section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "mobile_image",
+                "label": "Mobile Image"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Text",
+                "default": "ABOUT"
+            }
+        ],
+        "presets": [
+            {
+                "name": "about"
+            }
+        ]
+    }
+{% endschema %}
