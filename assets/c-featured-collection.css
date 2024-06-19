@@ -1,0 +1,80 @@
+.collection .collection__title h2.title {
+    font-size: 20px;
+    line-height: 27px;
+    margin: 0;
+}
+.card__content .card__information h3 a {
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+.card__content .card-information .price-item {
+    font-size: 16px;
+    line-height: 21px;
+}
+.card__content .card__information {
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.collection ul {
+    padding-bottom: 40px;
+}
+.collection .swiper .swiper-scrollbar {
+    height: 2px !important;
+}
+
+.collection .swiper {
+    padding: 20px 0;
+}
+.collection .swiper .collection__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.collection .swiper .collection__title .swiper-btns {
+    display: flex;
+    gap: 20px;
+}
+.collection .swiper .collection__title .swiper-button-prev,
+.collection .swiper .collection__title .swiper-button-next {
+    left: 0;
+    right: 0;
+    position: relative;
+    width: 16.29px;
+    height: 14.25px;
+    margin: 0;
+}
+.swiper-button-next::after {
+    content: none;
+}
+.swiper-button-prev::after {
+    content: none;
+}
+
+@media (max-width: 400px) {
+       
+    .collection .swiper .collection__title {
+        
+        font-size: 16px;
+    }
+    .card__content .card__information h3 a {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .card__content .card-information .price-item {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .swiper-button-next svg, .swiper-button-prev svg {
+        width: 10.36px;
+        height: 9.07px;
+    }
+    .collection .swiper .collection__title .swiper-btns {
+        gap: 13.6px;
+    }
+    .collection ul {
+        padding-bottom: 20px;
+    }
+}

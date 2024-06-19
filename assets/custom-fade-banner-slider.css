@@ -1,6 +1,8 @@
 .fade-banner-slider img {
     width: 100%;
-    aspect-ratio: 2;
+}
+.fade-banner-image {
+  aspect-ratio: 2;
 }
 .fade-banner-slider .description {
     position: absolute;
@@ -49,54 +51,62 @@
 
 
   
-    .banner__content--top-left {
+.fade-banner-slider .banner__content--top-left {
       align-items: flex-start;
       justify-content: flex-start;
     }
   
-    .banner__content--top-center {
+    .fade-banner-slider .banner__content--top-center {
       align-items: flex-start;
       justify-content: center;
     }
   
-    .banner__content--top-right {
+    .fade-banner-slider .banner__content--top-right {
       align-items: flex-start;
       justify-content: flex-end;
     }
   
-    .banner__content--middle-left {
+    .fade-banner-slider .banner__content--middle-left {
       align-items: center;
       justify-content: flex-start;
     }
   
-    .banner__content--middle-center {
+    .fade-banner-slider .banner__content--middle-center {
       align-items: center;
       justify-content: center;
     }
   
-    .banner__content--middle-right {
+    .fade-banner-slider .banner__content--middle-right {
       align-items: center;
       justify-content: flex-end;
     }
   
-    .banner__content--bottom-left {
+    .fade-banner-slider .banner__content--bottom-left {
       align-items: flex-end;
       justify-content: flex-start;
     }
   
-    .banner__content--bottom-center {
+    .fade-banner-slider .banner__content--bottom-center {
       align-items: flex-end;
       justify-content: center;
     }
   
-    .banner__content--bottom-right {
+    .fade-banner-slider .banner__content--bottom-right {
       align-items: flex-end;
       justify-content: flex-end;
     }
-  
-
-  @media (max-width: 400px) {
-    .fade-banner-slider img {
+    .fade-banner-slider .banner--content-align-center {
+      text-align: center;
+    }
+    .fade-banner-slider .banner--content-align-left {
+      text-align: left;
+    }
+    .fade-banner-slider .banner--content-align-right {
+      text-align: right;
+    }
+    
+    @media (max-width: 400px) {
+    .fade-banner-image {
         aspect-ratio: 0.76;
         object-fit: cover;
     }
@@ -111,8 +121,7 @@
     .fade-banner-slider .description {
         padding: 25px 25px 72px;
     }
-  }
-
-  .fade-banner-image {
-    aspect-ratio: 2;
+    .fade-banner-slider h2 {
+      font-size: 16px;
+    }
   }

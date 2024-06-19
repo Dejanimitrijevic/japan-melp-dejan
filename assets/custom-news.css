@@ -47,6 +47,7 @@
 .news .new_image img {
     position: absolute;
     width: 100%;
+  padding: 0 40px;
 }
 .news .image_title-text {
     display: flex;
@@ -60,3 +61,18 @@
 .news .image_title-text .image_text {
     font-size: 14px;
 }
+.news-text-btn-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+@media (max-width: 400px) {
+    .news .news_blocks {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .news .news_blocks .block {
+        width: 100%;
+    }
+} 

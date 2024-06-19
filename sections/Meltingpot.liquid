@@ -1,20 +1,22 @@
 
 <style>
-    .meltingpot .container {
+    .meltingpot .contain {
         position: relative;
+        margin: 0;
     }
-    .meltingpot .icon {
+    .meltingpot svg {
         position: absolute;
         bottom: 70px;
         left: 50%;
         transform: translateX(-50%);
+        width: 100%;
     }
 </style>
 
 
 
 <div class="meltingpot">
-    <div class="container">
+    <div class="contain">
         {% if section.settings.img %}
             <img
                 srcset="
@@ -33,9 +35,9 @@
                 height="auto"
                 alt="{{ section.settings.img.alt | escape }}"
               >
-              <div class="icon">
+              
                   {%  render 'meltingpot-icon' %}
-              </div>
+              
         {% endif %}
     </div>
 </div>

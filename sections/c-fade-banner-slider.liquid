@@ -1,6 +1,4 @@
 {{ 'custom-fade-banner-slider.css' |  asset_url |  stylesheet_tag }}
-{{ 'custom-fade-swiper.css' |  asset_url |  stylesheet_tag }}
-<script src="{{ 'c-swiper.js' | asset_url }}" defer="defer"></script>
 
 
 
@@ -30,7 +28,7 @@
                                     alt="{{ block.settings.image.alt | escape }}"
                                 >
                             </div>
-                            <div class="description {% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+                            <div class="description banner--content-align-{{ block.settings.desktop_content_alignment }} {% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
                                 {% if block.settings.title %}
                                     <h2 class="{{ block.settings.heading_size }}">{{ block.settings.title }}</h2>
                                 {% endif %}
@@ -151,7 +149,27 @@
                         "default": "middle-center",
                         "label": "t:sections.slideshow.blocks.slide.settings.box_align.label",
                         "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
-                    },
+                    },  
+                    {
+                        "type": "select",
+                        "id": "desktop_content_alignment",
+                        "options": [
+                            {
+                            "value": "left",
+                            "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+                            },
+                            {
+                            "value": "center",
+                            "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+                            },
+                            {
+                            "value": "right",
+                            "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+                            }
+                        ],
+                        "default": "center",
+                        "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+                    },              
                     {
                         "type": "checkbox",
                         "id": "show_text_box",
