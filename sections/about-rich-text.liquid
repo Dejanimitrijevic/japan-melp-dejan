@@ -1,0 +1,56 @@
+<style>
+    .about-rich-text {
+        padding-top: 152px;
+        padding-bottom: 137px;
+    }
+    .about-rich-text p {
+        font-size: 20px;
+        line-height: 40px;
+        font-family: Hiragino Kaku Gothic ProN;
+        margin: 0;
+    }
+    .about-rich-text-border-bottom {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255,255,255), rgba(153, 153, 153), rgba(255, 255, 255));
+    border-image-slice: 1;
+    }
+    @media (max-width: 400px) {
+        .about-rich-text {
+            padding-top: 73px;
+            padding-bottom: 64px;
+        }
+        .about-rich-text p {
+            font-size: 14px;
+            line-height: 30px;
+        }
+    }
+</style>
+
+<div class="about-rich-text">
+    <div class="about-rich-text-container page-width">
+        {% if section.settings.richtext %}
+            {{ section.settings.richtext }}
+        {% endif %}
+    </div>
+</div>
+<div class="about-rich-text-border-bottom"></div>
+
+
+{% schema %}
+    {
+        "name": "about rich text",
+        "class": "section",
+        "settings": [
+            {
+                "type": "richtext",
+                "id": "richtext",
+                "label": "Rich text"
+            }
+        ],
+        "presets": [
+            {
+                "name": "about rich text"
+            }
+        ]
+    }
+{% endschema %}

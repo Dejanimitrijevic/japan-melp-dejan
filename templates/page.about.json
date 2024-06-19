@@ -2,13 +2,23 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "about_banner_6YQbAF": {
+      "type": "about-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Mask_Group_15_14883513-7484-4581-ac3a-0c357c4d66c7.png",
+        "mobile_image": "shopify:\/\/shop_images\/Mask_Group_16.png",
+        "text": "ABOUT"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "about_banner_6YQbAF"
   ]
 }
