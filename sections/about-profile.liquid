@@ -1,0 +1,177 @@
+
+<style>
+    .about-profile-container {
+        padding-top: 144px;
+        padding-bottom: 152px;
+    }
+    .about-profile .bg-with-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 100px;
+    }
+    .about-profile .bg-with-content .bg,
+    .about-profile .bg-with-content .content {
+        width: calc(50% - 50px);
+    }
+    .about-profile .bg-with-content .bg img {
+        width: 100%;
+    }
+    .about-profile .bg-with-content .content .icon img {
+        width: 148.14px;
+        height: 42.53px;
+    }
+    
+    .about-profile .about-profile-container h1 {
+        font-size: 30px;
+        font-family: Semplicita Pro;
+        letter-spacing: 0.05em;
+        line-height: 40px;
+        margin-top: 0;
+        margin-bottom: 47px;
+        text-transform: uppercase;
+    }
+    .about-profile .about-profile-container .content p {
+        margin: 0;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        line-height: 35px;
+        font-family: 'Hiragino Kaku Gothic ProN';
+    }
+    .about-profile .content {
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+    }
+    @media (max-width: 400px) {
+        .about-profile .bg-with-content {
+            flex-direction: column;
+            gap: 25px;
+        }
+        .about-profile .bg-with-content .bg, .about-profile .bg-with-content .content {
+            width: 100%;
+        }
+        .about-profile-container {
+            padding-top: 69px;
+            padding-bottom: 75px;
+        }
+        .about-profile .about-profile-container h1 {
+            font-size: 20px;
+            line-height: 27px;
+            margin-bottom:35px;
+        }
+        .about-profile .content {
+            gap: 25px;
+        }
+        .about-profile .bg-with-content .content .icon img {
+            width: 117.37px;
+            height: 33.7px;
+        }
+        .about-profile .about-profile-container .content p {
+            font-size: 12px;
+            line-height: 30px;
+        }
+    }
+ </style>
+
+<div class="about-profile">
+    <div class="about-profile-container page-width">
+        {% if section.settings.title %}
+            <h1>{{ section.settings.title }}</h1>
+        {% endif %}
+
+        <div class="bg-with-content">
+            {% if section.settings.bg_image %}
+                <div class="bg">
+                    <img
+                        srcset="
+                        {% if section.settings.bg_image.width >= 350 %}{{ section.settings.bg_image | image_url: width: 350 }} 350w,{% endif %}
+                        {% if section.settings.bg_image.width >= 750 %}{{ section.settings.bg_image | image_url: width: 750 }} 750w,{% endif %}
+                        {% if section.settings.bg_image.width >= 1100 %}{{ section.settings.bg_image | image_url: width: 1100 }} 1100w,{% endif %}
+                        {% if section.settings.bg_image.width >= 1500 %}{{ section.settings.bg_image | image_url: width: 1500 }} 1500w,{% endif %}
+                        {% if section.settings.bg_image.width >= 2200 %}{{ section.settings.bg_image | image_url: width: 2200 }} 2200w,{% endif %}
+                        {% if section.settings.bg_image.width >= 3000 %}{{ section.settings.bg_image | image_url: width: 3000 }} 3000w,{% endif %}
+                        {{ section.settings.bg_image | image_url }} {{ section.settings.bg_image.width }}w
+                        "
+                        src="{{ section.settings.bg_image | image_url: width: 1100 }}"
+                        loading="eager"
+                        fetchpriority="high"
+                        width="auto"
+                        height="auto"
+                        alt="{{ section.settings.bg_image.alt | escape }}"
+                        class="image"
+                    >
+                </div>
+            {% endif %}
+
+            <div class="content">
+                {% if section.settings.icon %}
+                    <div class="icon">
+                        <img
+                            srcset="
+                            {% if section.settings.icon.width >= 350 %}{{ section.settings.icon | image_url: width: 350 }} 350w,{% endif %}
+                            {% if section.settings.icon.width >= 750 %}{{ section.settings.icon | image_url: width: 750 }} 750w,{% endif %}
+                            {% if section.settings.icon.width >= 1100 %}{{ section.settings.icon | image_url: width: 1100 }} 1100w,{% endif %}
+                            {% if section.settings.icon.width >= 1500 %}{{ section.settings.icon | image_url: width: 1500 }} 1500w,{% endif %}
+                            {% if section.settings.icon.width >= 2200 %}{{ section.settings.icon | image_url: width: 2200 }} 2200w,{% endif %}
+                            {% if section.settings.icon.width >= 3000 %}{{ section.settings.icon | image_url: width: 3000 }} 3000w,{% endif %}
+                            {{ section.settings.icon | image_url }} {{ section.settings.icon.width }}w
+                            "
+                            src="{{ section.settings.icon | image_url: width: 1100 }}"
+                            loading="eager"
+                            fetchpriority="high"
+                            width="auto"
+                            height="auto"
+                            alt="{{ section.settings.icon.alt | escape }}"
+                            class="image"
+                        >
+                    </div>
+                {% endif %}
+                {% if section.settings.text %}
+                    {{ section.settings.text }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% schema %}
+    {
+        "name": "about profile",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "profile"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Photo"
+            },
+            {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "header Icon"
+            },
+            {
+                "type": "richtext",
+                "id": "text",
+                "label": "Text"
+            }
+
+        ],
+        "presets": [
+            {
+                "name": "about profile"
+            }
+        ]
+    }
+{% endschema %}

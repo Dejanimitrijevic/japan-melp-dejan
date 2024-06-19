@@ -15,10 +15,17 @@
         "mobile_image": "shopify:\/\/shop_images\/Mask_Group_16.png",
         "text": "ABOUT"
       }
+    },
+    "about_rich_text_EChggn": {
+      "type": "about-rich-text",
+      "settings": {
+        "richtext": "<p>年齢を重ね、生きていく上でどんな考えを持ち、<br\/>素肌や体そして心と向き合っていくべきか…<br\/><br\/>自分の内面を深く見つめる時間。<br\/>自分らしい美を追求する時間。<br\/>心を解放しリラックスする時間。<br\/><br\/>ハーバルセラピーの観点で、<br\/>現代のライフスタイルから起こるトラブルを<br\/>セルフケアしていくお手伝いをしたい。<br\/>そんな思いから生まれたサロンです。<\/p><p>自分を愛するすべての人へ…<\/p>"
+      }
     }
   },
   "order": [
     "main",
-    "about_banner_6YQbAF"
+    "about_banner_6YQbAF",
+    "about_rich_text_EChggn"
   ]
 }

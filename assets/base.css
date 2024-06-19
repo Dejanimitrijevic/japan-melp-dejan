@@ -496,6 +496,10 @@ h6:empty {
   font-family: Hiragino Kaku Gothic ProN;
   src: url(https://cdn.shopify.com/s/files/1/0876/0128/3387/files/Hiragino_Kaku_Gothic_Pro_W3.otf?v=1718833167);
 }
+@font-face {
+  font-family: Semplicita Pro;
+  src: url(https://cdn.shopify.com/s/files/1/0876/0128/3387/files/SemplicitaPro-Medium.otf?v=1718836090);
+}
 .link--text:hover {
   color: rgba(var(--color-foreground));
 }
