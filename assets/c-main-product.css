@@ -10,6 +10,7 @@
 .main-product .product-price-width-tax {
     display: flex;
     gap: 17px;
+    align-items: center;
 
 }
 .main-product .product__tax {
@@ -29,6 +30,7 @@
     margin: 0;
     display: flex;
     padding: 1px 17px;
+    height: 19px;
 }
 .product-form__buttons button {
     min-height: 45px !important;
@@ -70,11 +72,20 @@
     text-decoration: none;
     color: #766F6D;
 }
-.product__description--title {
+.detail-header {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 28px 0;
+}
+.detail-header h3 {
+    font-size: 12px;
+    line-height: 30px;
+}
+.detail-header p,
+.brand p {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: 14px;
+    line-height: 30px;
 }
 .about-rich-text-border-left {
     border-left: 1px solid transparent;
@@ -84,5 +95,51 @@
 }
 .about-rich-text-border-left p {
     padding-left: 20px;
-    margin-top: 5px;
+    margin: 0;
+}
+.detail-border-bottom--dotted {
+    border-bottom: 1px dotted #A39D9B;
+}
+.product-description {
+    margin-bottom: 83px;
+}
+.how-to-it {
+    margin-bottom: 88px;
+}
+.meterial {
+    margin-bottom: 80px;
+}
+.size {
+    margin-bottom: 78px;
+}
+.brand .brand-detail {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+}
+.brand .brand-detail img {
+    width: 300px;
+}
+.brand .brand-detail a {
+    padding-left: 25px;
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(0turn, rgba(255,255,255), rgba(153, 153, 153), rgba(255, 255, 255));
+    border-image-slice: 1;
+}
+.brand .detail-header h3 {
+    margin: 0;
+}
+.brand {
+    padding-top: 27px;
+    padding-bottom: 45px;
+    border-top: 1px dotted #A39D9B;
+    border-bottom: 1px dotted #A39D9B;
+}
+.product-description {
+    padding-top: 100px;
+}
+.product-form__buttons button:hover {
+    background: linear-gradient(90deg, rgba(236, 175, 142, 1) 0%, rgba(228, 134, 94, 1) 51%, rgba(244, 182, 83, 1) 100%);
+    color: white;
+    border: 0;
 }

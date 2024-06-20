@@ -669,19 +669,72 @@
         {% if block.type == 'description' %}
           {%- if product.description != blank -%}
             <div class="product-description">
-              <div class="product__description--title">
+              <div class="product__description--title detail-header">
                 {%  render 'product-detail-li-icon' %}
-                <h3 class="product__description--title">DESCRIPTION</h3>
-              </div> 
-
-              
+                <h3 class="detail--title">DESCRIPTION</h3>
+              </div>               
               <div class="about-rich-text-border-left product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                 {{ product.description }}
               </div>
-            {%- endif -%}
             </div>
-        {% endif %}
+            {%- endif -%}
+        {% endif %}       
     {% endfor %}
+
+
+      {% if product.metafields.custom.how_to_it != blank %}
+        <div class="how-to-it">
+          <div class="detail-header">
+            {%  render 'product-detail-li-icon' %}
+            <h3 class="detail--title">HOW TO IT</h3>
+          </div>
+          <div class="about-rich-text-border-left">
+            <p>{{ product.metafields.custom.how_to_it }}</p>
+          </div>
+        </div>
+      {% endif %}
+
+
+      {% if product.metafields.custom._material != blank %}
+        <div class="meterial">
+          <div class="detail-header">
+            {%  render 'product-detail-li-icon' %}
+            <h3 class="detail--title">METERIAL</h3>
+          </div>
+          <div class="about-rich-text-border-left">
+            <p>{{ product.metafields.custom._material }}</p>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom._size != blank %}
+        <div class="size">
+          <div class="detail-header">
+            {%  render 'product-detail-li-icon' %}
+            <h3 class="detail--title">SIZE</h3>
+          </div>
+          <div class="about-rich-text-border-left">
+            <p>{{ product.metafields.custom._size }}</p>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="brand">
+        <div class="detail-header">
+            {%  render 'product-detail-li-icon' %}
+            <h3 class="detail--title">BRAND</h3>
+          </div>
+          <div class="brand-detail">
+            {% assign metaobject = product.metafields.custom.brand.value %}
+            <script>console.log("metaobject", {{ metaobject |  json }})</script>
+              <p class="brand_information">{{ metaobject.information }}</p>            
+              <a class="mark" href="{{ metaobject.mark_url.value }}">
+                {{ metaobject.mark | img_tag }}
+              </a>
+          </div>            
+      </div>
+
+
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
@@ -711,7 +764,7 @@
     {%- endfor -%}
 
     {%- if product.media.size > 0 -%}
-      <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script
       <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
