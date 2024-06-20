@@ -58,14 +58,14 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
-    width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
-    padding: 0 0 0 4rem;
-    max-width: 35%;
-    width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+    padding: 0 0 0 10rem;
+    max-width: 50%;
+    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media).product--right .product__info-wrapper {
@@ -200,6 +200,7 @@
 /* Overrides */
 .shopify-payment-button__more-options {
   color: rgb(var(--color-foreground));
+  display: none;
 }
 
 .shopify-payment-button__button {
@@ -356,7 +357,8 @@ a.product__text {
 }
 
 .product-form__buttons {
-  max-width: 44rem;
+  max-width: 100%;
+  width: 100%;
 }
 
 .product--no-media .product__info-container > modal-opener {
@@ -521,7 +523,7 @@ a.product__text {
 
 @media screen and (min-width: 990px) {
   .product--stacked .product__media-item {
-    max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: calc(20% - 10px / 2);
   }
 
   .product:not(.product--columns) .product__media-list .product__media-item:first-child,

@@ -38,7 +38,7 @@
 -%}
 
 <div
-  class="
+  class=" product-price-width-tax
     price
     {%- if price_class %} {{ price_class }}{% endif -%}
     {%- if available == false %} price--sold-out{% endif -%}
@@ -117,6 +117,17 @@
       </span>
     </small>
   </div>
+
+  <div class="product__tax caption rte">
+    {%- if cart.taxes_included -%}
+      {{ 'products.product.include_taxes' | t }}
+    {%- endif -%}
+    {%- if shop.shipping_policy.body != blank -%}
+      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+    {%- endif -%}
+  </div>
+
+
   {%- if show_badges -%}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
       {{ 'products.product.on_sale' | t }}
@@ -125,5 +136,5 @@
     <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
       {{ 'products.product.sold_out' | t }}
     </span>
-  {%- endif -%}
+  {%- endif -%} 
 </div>

@@ -1,0 +1,88 @@
+.product__title h1 {
+    font-size: 20px;
+    line-height: 20px;
+}
+.main-product .price-item.price-item--regular {
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.main-product .product-price-width-tax {
+    display: flex;
+    gap: 17px;
+
+}
+.main-product .product__tax {
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    margin: 0;
+}
+.quantity__label {
+    display: none;
+}
+.main-product .price span.price__badge-sold-out {
+    align-items: center;
+    background: #D0CAC8;
+    margin: 0;
+    display: flex;
+    padding: 1px 17px;
+}
+.product-form__buttons button {
+    min-height: 45px !important;
+}
+.main-product product-form {
+    margin: 58px 0 66px 0 !important;
+}
+.main-text--title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #A39D9B;
+}
+.main-text--title .main-text {
+    margin: 0;
+    font-size: 14px;
+    font-family: Hiragino Kaku Gothic ProN;
+    line-height: 20px;
+}
+.main-text--content p {
+    font-size: 14px;
+    font-family: Hiragino Kaku Gothic ProN;
+    line-height: 20px;
+    margin: 35px 0;
+}
+.main-text-btns {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+.main-text-btns .main-text--btn__1,
+.main-text-btns .main-text--btn__2 {
+    border: 1px solid #A39D9B;
+    border-radius: 50px;
+    font-size: 10px;
+    line-height: 20px;
+    padding: 4px 10px 3px 9px;
+    text-decoration: none;
+    color: #766F6D;
+}
+.product__description--title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 28px 0;
+}
+.about-rich-text-border-left {
+    border-left: 1px solid transparent;
+    border-image: linear-gradient(0turn, rgba(255,255,255), rgba(153, 153, 153), rgba(255, 255, 255));
+    border-image-slice: 1;
+    margin-left: 10px;
+}
+.about-rich-text-border-left p {
+    padding-left: 20px;
+    margin-top: 5px;
+}

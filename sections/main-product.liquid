@@ -17,7 +17,7 @@
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
-
+    {{ 'c-main-product.css' |  asset_url |  stylesheet_tag }}
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -67,7 +67,7 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
-    <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div class="main-product product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
@@ -84,6 +84,24 @@
             {%- case block.type -%}
               {%- when '@app' -%}
                 {% render block %}
+              {% when 'maintext' %}
+                <div class="main-text--title">
+                  {% if block.settings.text %}
+                    <h2 class="main-text">{{ block.settings.text }}</h2>
+                  {% endif %}
+                  {%  render 'main-text-icon' %}
+                </div>
+                {% if block.settings.content %}
+                  <span class="main-text--content">{{ block.settings.content }}</span>
+                {% endif %}
+                <div class="main-text-btns">
+                  {% if block.settings.btn_link_1 %}
+                    <a class="main-text--btn__1" href="{{ block.settings.btn_link_1 }}">{{ block.settings.btn_label_1 }}</a>
+                  {% endif %}
+                  {% if block.settings.btn_link_2 %}
+                    <a class="main-text--btn__2" href="{{ block.settings.btn_link_2 }}">{{ block.settings.btn_label_2 }}</a>
+                  {% endif %}
+                </div>
               {%- when 'text' -%}
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
@@ -101,27 +119,29 @@
                   </a>
                 </div>
               {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                  {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%}
-                </div>
-                {%- if product.quantity_price_breaks_configured? -%}
-                  <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
-                    <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+               
+                  <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                    {%- render 'price',
+                      product: product,
+                      use_variant: true,
+                      show_badges: true,
+                      price_class: 'price--large'
+                    -%}
                   </div>
-                {%- endif -%}
-                <div class="product__tax caption rte">
-                  {%- if cart.taxes_included -%}
-                    {{ 'products.product.include_taxes' | t }}
+                  {% comment %} <div class="product__tax caption rte">
+                    {%- if cart.taxes_included -%}
+                      {{ 'products.product.include_taxes' | t }}
+                    {%- endif -%}
+                    {%- if shop.shipping_policy.body != blank -%}
+                      {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                    {%- endif -%}
+                  </div> {% endcomment %}
+                
+                  {%- if product.quantity_price_breaks_configured? -%}
+                    <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
+                      <span>{{ 'products.product.volume_pricing.note' | t }}</span>
+                    </div>
                   {%- endif -%}
-                  {%- if shop.shipping_policy.body != blank -%}
-                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                  {%- endif -%}
-                </div>
                 <div {{ block.shopify_attributes }}>
                   {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
                   {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -184,12 +204,7 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
-              {%- when 'description' -%}
-                {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
-                  </div>
-                {%- endif -%}
+              
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -650,6 +665,23 @@
       </div>
     </div>
 
+    {% for block in section.blocks %}
+        {% if block.type == 'description' %}
+          {%- if product.description != blank -%}
+            <div class="product-description">
+              <div class="product__description--title">
+                {%  render 'product-detail-li-icon' %}
+                <h3 class="product__description--title">DESCRIPTION</h3>
+              </div> 
+
+              
+              <div class="about-rich-text-border-left product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
+                {{ product.description }}
+              </div>
+            {%- endif -%}
+            </div>
+        {% endif %}
+    {% endfor %}
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
@@ -783,6 +815,43 @@
           ],
           "default": "body",
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "maintext",
+      "name": "maintext",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Text block",
+          "label": "Main text"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "btn_label_1",
+          "label": "Button label 1"
+        },
+        {
+          "type": "url",
+          "id": "btn_link_1",
+          "label": "Button Link 1"
+        },
+        {
+          "type": "text",
+          "id": "btn_label_2",
+          "label": "Button label 2"
+        },
+        {
+          "type": "url",
+          "id": "btn_link_2",
+          "label": "Button Link 2"
         }
       ]
     },

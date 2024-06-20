@@ -5,6 +5,7 @@
       "blocks": {
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ product.vendor }}",
             "text_style": "uppercase"
@@ -39,15 +40,20 @@
             "show_gift_card_recipient": true
           }
         },
+        "maintext_RXmaKw": {
+          "type": "maintext",
+          "settings": {
+            "text": "別のお支払い方法",
+            "content": "<p>ここにメインテキストが入ります。ここにメインテキストが入ります。ここにメインテキストが入ります。ここにメインテキストが入ります。ここにメインテキストが入ります。ここにメインテキストが入ります。<\/p>",
+            "btn_label_1": "STRESSFUL",
+            "btn_link_1": "shopify:\/\/collections\/all",
+            "btn_label_2": "RELAXATION",
+            "btn_link_2": "shopify:\/\/collections"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         }
       },
@@ -58,8 +64,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "share"
+        "maintext_RXmaKw",
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -69,7 +75,7 @@
         "media_fit": "contain",
         "gallery_layout": "stacked",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
