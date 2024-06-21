@@ -1,4 +1,9 @@
 <style>
+
+    .about-rich-text-container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
     .about-rich-text {
         padding-top: 152px;
         padding-bottom: 137px;
@@ -27,7 +32,7 @@
 </style>
 
 <div class="about-rich-text">
-    <div class="about-rich-text-container page-width">
+    <div class="about-rich-text-container">
         {% if section.settings.richtext %}
             {{ section.settings.richtext }}
         {% endif %}
