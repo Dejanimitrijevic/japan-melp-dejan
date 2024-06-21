@@ -1,0 +1,191 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "brand_list_j4htEr": {
+      "type": "brand-list",
+      "blocks": {
+        "brand_qxj6dT": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_33.png",
+            "mark": "shopify:\/\/shop_images\/78692eb8438a92f7e11a516981ad7fad-2_0cdb3c2d-bbcc-4dcf-9ae7-e7094f11ea46.png",
+            "brand_link": "http:\/\/lightly.jp\/"
+          }
+        },
+        "brand_FUNdML": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_34.png",
+            "mark": "shopify:\/\/shop_images\/n_logo2.png",
+            "brand_link": "https:\/\/littlewonders-jp.jimdofree.com\/"
+          }
+        },
+        "brand_cpRwyc": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_35.png",
+            "mark": "shopify:\/\/shop_images\/haut-logo.png",
+            "brand_link": "https:\/\/www.hautstudio.com\/"
+          }
+        },
+        "brand_nNBkLD": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_67.png",
+            "mark": "shopify:\/\/shop_images\/muugi-logo.png",
+            "brand_link": "https:\/\/muugi.jp\/en"
+          }
+        },
+        "brand_VzjyqL": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_37.png",
+            "mark": "shopify:\/\/shop_images\/niocan-logo.png",
+            "brand_link": "https:\/\/niocan.jp\/"
+          }
+        },
+        "brand_R8GrLL": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_38.png",
+            "mark": "shopify:\/\/shop_images\/tothesun-logo.png",
+            "brand_link": "https:\/\/www.tothesun.store\/"
+          }
+        },
+        "brand_9hjjFM": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_39.png",
+            "mark": "shopify:\/\/shop_images\/the-lemon-boy-logo.png",
+            "brand_link": "https:\/\/www.the-lemon-boy.com\/"
+          }
+        },
+        "brand_N9mBya": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_40.png",
+            "mark": "shopify:\/\/shop_images\/additionstudio-logo.png",
+            "brand_link": ""
+          }
+        },
+        "brand_tkL4FV": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_41.png",
+            "mark": "shopify:\/\/shop_images\/tribeearth-logo.png",
+            "brand_link": "https:\/\/www.tribeearth.com.au\/"
+          }
+        },
+        "brand_Uw7jaX": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_42.png",
+            "mark": "shopify:\/\/shop_images\/subtle-bodies-logo.png",
+            "brand_link": "https:\/\/additionstudio.jau.co.jp\/"
+          }
+        },
+        "brand_V9jg4j": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_43.png",
+            "mark": "shopify:\/\/shop_images\/urbapothecary-logo.png",
+            "brand_link": "https:\/\/subtle-bodies.jau.co.jp\/"
+          }
+        },
+        "brand_qYf6dD": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_44.png",
+            "mark": "shopify:\/\/shop_images\/limerime-logo.png",
+            "brand_link": "https:\/\/linktr.ee\/urbapothecary"
+          }
+        },
+        "brand_J6fFL4": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_45.png",
+            "mark": "shopify:\/\/shop_images\/lipintimatecare-logo.png",
+            "brand_link": "https:\/\/lipintimatecare.com\/"
+          }
+        },
+        "brand_kU3jBP": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_46.png",
+            "mark": "shopify:\/\/shop_images\/speciesbythethousands-logo.png",
+            "brand_link": "https:\/\/speciesbythethousands.jp\/"
+          }
+        },
+        "brand_Rwhhkx": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_47.png",
+            "mark": "shopify:\/\/shop_images\/lunar.222-logo.png",
+            "brand_link": ""
+          }
+        },
+        "brand_gGt7Vj": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_48.png",
+            "mark": "shopify:\/\/shop_images\/klarmclay-logo.png",
+            "brand_link": ""
+          }
+        },
+        "brand_hQi4zA": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_49.png",
+            "mark": "shopify:\/\/shop_images\/studiohenrywilson-logo.png",
+            "brand_link": "https:\/\/zoekg.hp.peraichi.com\/"
+          }
+        },
+        "brand_BUp4Hi": {
+          "type": "brand",
+          "settings": {
+            "main_img": "shopify:\/\/shop_images\/Mask_Group_71.png",
+            "mark": "shopify:\/\/shop_images\/lolohokkaido-logo.png",
+            "brand_link": "https:\/\/www.klarmclay.com"
+          }
+        }
+      },
+      "block_order": [
+        "brand_qxj6dT",
+        "brand_FUNdML",
+        "brand_cpRwyc",
+        "brand_nNBkLD",
+        "brand_VzjyqL",
+        "brand_R8GrLL",
+        "brand_9hjjFM",
+        "brand_N9mBya",
+        "brand_tkL4FV",
+        "brand_Uw7jaX",
+        "brand_V9jg4j",
+        "brand_qYf6dD",
+        "brand_J6fFL4",
+        "brand_kU3jBP",
+        "brand_Rwhhkx",
+        "brand_gGt7Vj",
+        "brand_hQi4zA",
+        "brand_BUp4Hi"
+      ],
+      "settings": {
+        "title": "BRAND LIST",
+        "brand_column_count": 4,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "main",
+    "brand_list_j4htEr"
+  ]
+}
