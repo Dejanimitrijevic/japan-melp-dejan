@@ -1,0 +1,132 @@
+{{ 'c-brand-list.css' |  asset_url |  stylesheet_tag }}
+
+<div class="brand-list">
+    <div class="brand-list-container">
+        {% if section.settings.title %}
+            <h1 class="title">{{ section.settings.title }}</h1>
+        {% endif %}
+        <div class="barnds">
+            {% for block in section.blocks %}
+                {% if block.type == 'brand' %}
+                    <div class="brand-item">
+                        <div class="brand-item-container">
+                            {% if block.settings.main_img %}
+                                <img
+                                    srcset="
+                                    {% if block.settings.main_img.width >= 350 %}{{ block.settings.main_img | image_url: width: 350 }} 350w,{% endif %}
+                                    {% if block.settings.main_img.width >= 750 %}{{ block.settings.main_img | image_url: width: 750 }} 750w,{% endif %}
+                                    {% if block.settings.main_img.width >= 1100 %}{{ block.settings.main_img | image_url: width: 1100 }} 1100w,{% endif %}
+                                    {% if block.settings.main_img.width >= 1500 %}{{ block.settings.main_img | image_url: width: 1500 }} 1500w,{% endif %}
+                                    {% if block.settings.main_img.width >= 2200 %}{{ block.settings.main_img | image_url: width: 2200 }} 2200w,{% endif %}
+                                    {% if block.settings.main_img.width >= 3000 %}{{ block.settings.main_img | image_url: width: 3000 }} 3000w,{% endif %}
+                                    {{ block.settings.main_img | image_url }} {{ block.settings.main_img.width }}w
+                                    "
+                                    src="{{ block.settings.main_img | image_url: width: 1100 }}"
+                                    loading="eager"
+                                    fetchpriority="high"
+                                    width="auto"
+                                    height="auto"
+                                    alt="{{ block.settings.main_img.alt | escape }}"
+                                    class="image"
+                                >
+                            {% endif %}
+
+                            {% if block.settings.mark %}
+                                <div class="brand-mark">
+                                    <img
+                                        srcset="
+                                        {% if block.settings.mark.width >= 350 %}{{ block.settings.mark | image_url: width: 350 }} 350w,{% endif %}
+                                        {% if block.settings.mark.width >= 750 %}{{ block.settings.mark | image_url: width: 750 }} 750w,{% endif %}
+                                        {% if block.settings.mark.width >= 1100 %}{{ block.settings.mark | image_url: width: 1100 }} 1100w,{% endif %}
+                                        {% if block.settings.mark.width >= 1500 %}{{ block.settings.mark | image_url: width: 1500 }} 1500w,{% endif %}
+                                        {% if block.settings.mark.width >= 2200 %}{{ block.settings.mark | image_url: width: 2200 }} 2200w,{% endif %}
+                                        {% if block.settings.mark.width >= 3000 %}{{ block.settings.mark | image_url: width: 3000 }} 3000w,{% endif %}
+                                        {{ block.settings.main_img | image_url }} {{ block.settings.main_img.width }}w
+                                        "
+                                        src="{{ block.settings.mark | image_url: width: 1100 }}"
+                                        loading="eager"
+                                        fetchpriority="high"
+                                        width="auto"
+                                        height="auto"
+                                        alt="{{ block.settings.mark.alt | escape }}"
+                                        class="image"
+                                    >
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "brand list",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Text",
+                "default": "BRAND LIST"
+            },
+            {
+                "type": "range",
+                "id": "brand_column_count",
+                "label": "Brand Column Count",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "unit": "t",
+                "default": 4
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_top",
+                "default": 36
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 4,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_bottom",
+                "default": 36
+            }
+        ],
+        "blocks": [
+            {
+                "type": "brand",
+                "name": "brand",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "main_img",
+                        "label": "Background"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "mark",
+                        "label": "Mark"
+                    },
+                    {
+                        "type": "url",
+                        "id": "brand_link",
+                        "label": "brand Link"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
