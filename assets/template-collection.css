@@ -101,3 +101,26 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+.product-count {
+  display: none;
+}
+.collection-title-list-with-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.collection-title-list {
+  display: flex;
+  gap: 5px;
+}
+.collection-title-list a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Inter;
+  color: black;
+}
+.box.clicked {
+  text-decoration: underline;
+}
