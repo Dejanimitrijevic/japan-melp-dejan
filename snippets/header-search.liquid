@@ -16,9 +16,23 @@
       aria-label="{{ 'general.search.search' | t }}"
     >
       <span>
-        <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+          <defs>
+            <clipPath id="clip-path">
+              <rect id="Rectangle_258" data-name="Rectangle 258" width="18" height="18" transform="translate(-0.013 -0.163)" fill="none"/>
+            </clipPath>
+          </defs>
+          <g id="Group_389" data-name="Group 389" transform="translate(0.013 0.163)">
+            <g id="Group_388" data-name="Group 388" transform="translate(0 0)" clip-path="url(#clip-path)">
+              <path id="Path_662" data-name="Path 662" d="M17.411,17.839a.424.424,0,0,1-.3-.125L11.191,11.8l-.247.2A6.737,6.737,0,0,1,.493,4.2a6.733,6.733,0,0,1,11-2.228,6.73,6.73,0,0,1,.5,8.972l-.2.247,5.918,5.918a.426.426,0,0,1-.3.727M6.735.855A5.882,5.882,0,0,0,2.575,10.9a5.882,5.882,0,1,0,8.319-8.319A5.844,5.844,0,0,0,6.735.855" transform="translate(0 -0.002)"/>
+            </g>
+          </g>
+        </svg>
+
+        {% comment %} <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
           <use href="#icon-search">
         </svg>
+         {% endcomment %}
         <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
           <use href="#icon-close">
         </svg>

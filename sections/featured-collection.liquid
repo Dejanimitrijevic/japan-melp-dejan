@@ -73,6 +73,11 @@
   >
   
   <div class="{% if section.settings.enable_desktop_slider == true %}swiper horizontal_scroll_swiper swiper-featured-collection {% endif %} {% if section.settings.enable_desktop_slider ==  false %}slider-mobile-gutter{% if section.settings.full_width %} slider-component-full-width{% endif %}{% if show_mobile_slider == false %} page-width{% endif %}{% if show_desktop_slider == false and section.settings.full_width == false %} page-width-desktop{% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% endif %}">
+    <div class="all-item-btn">
+        {% if section.settings.btn_label %}
+            <a class="all-item" href="{{ section.settings.btn_link }}">{{ section.settings.btn_label }}</a>
+        {% endif %}
+    </div>
     <div class="collection__title title-wrapper title-wrapper--no-top-margin {% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -247,6 +252,16 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+        "type": "text",
+        "id": "btn_label",
+        "label": "Button Label"
+    },
+    {
+        "type": "url",
+        "id": "btn_link",
+        "label": "button Link"
     },
     {
       "type": "richtext",

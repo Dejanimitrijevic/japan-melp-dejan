@@ -1,0 +1,34 @@
+.header .menu-About {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.header .menu-About a,
+summary span {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.025em;
+    text-decoration: none;    
+    color: black;
+}
+.header__inline-menu .list-menu li a {
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+}
+.header__inline-menu .list-menu li a span {
+    text-decoration: none;
+}
+account-icon {
+    display: flex;
+}
+.header__icons .cart-count-bubble {
+    background: linear-gradient(90deg, rgba(227, 155, 146, 1) 0%, rgba(242, 146, 95, 1) 100%);
+    width: 11px;
+    height: 11px;
+    bottom: 20px;
+    left: 25px;
+}
+.header__icons .cart-count-bubble span {
+    color: white;
+}

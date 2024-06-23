@@ -52,8 +52,21 @@
 .swiper-button-prev::after {
     content: none;
 }
+.all-item-btn {
+    padding-top: 30px;
+    padding-bottom: 72px;
+}
+.all-item-btn a {
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    line-height: 40px;
+    font-family: Semplicita Pro;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1c1727;
+}
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
        
     .collection .swiper .collection__title {
         

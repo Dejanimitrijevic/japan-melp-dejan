@@ -18,11 +18,29 @@
       </a>
     </li>
   {%- endif -%}
+
+  {%- if settings.social_email_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_email_link }}" class="link list-social__link">
+        {%- render 'icon-email' -%}
+        <span class="visually-hidden">email</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_instagram_link != blank -%}
     <li class="list-social__item">
       <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
         {%- render 'icon-instagram' -%}
         <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_line_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_line_link }}" class="link list-social__link">
+        {% comment %} {%- render 'icon-line' -%} {% endcomment %}
+        <img src="https://cdn.shopify.com/s/files/1/0876/0128/3387/files/Group_370.png?v=1719100917" style="width: 28px;height: 26px;">
+        <span class="visually-hidden">LINE</span>
       </a>
     </li>
   {%- endif -%}

@@ -2,26 +2,52 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "announcement_bar_c4aQG4": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_XrWGh3": {
+          "type": "announcement",
+          "settings": {
+            "text": "送料全国一律000円（税込00,000円以上で無料）",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_XrWGh3"
+      ],
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/a80da13e-85a0-4827-961e-3994e768d43b_94f01fa0-36e0-4a32-adbb-13cb0f350549.png",
+        "color_scheme": "scheme-1",
+        "show_line_separator": false,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
     "header": {
       "type": "header",
       "settings": {
-        "logo_position": "middle-left",
+        "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 3,
+        "padding_bottom": 3
       }
     }
   },
   "order": [
+    "announcement_bar_c4aQG4",
     "header"
   ]
 }

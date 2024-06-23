@@ -84,6 +84,8 @@
       "settings": {
         "title": "SKIN",
         "heading_size": "h2",
+        "btn_label": "ALL ITEMS",
+        "btn_link": "https:\/\/melp.jp\/collections\/all",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -113,6 +115,8 @@
       "settings": {
         "title": "WEAR",
         "heading_size": "h2",
+        "btn_label": "",
+        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -141,6 +145,8 @@
       "settings": {
         "title": "FOOD",
         "heading_size": "h2",
+        "btn_label": "",
+        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -169,6 +175,8 @@
       "settings": {
         "title": "LIFE",
         "heading_size": "h2",
+        "btn_label": "",
+        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -198,14 +206,14 @@
         "heading_bURiHN": {
           "type": "heading",
           "settings": {
-            "heading": "",
-            "heading_size": "h1"
+            "heading": "((ORIGINAL BRAND))",
+            "heading_size": "h2"
           }
         },
         "text_eWqtWY": {
           "type": "text",
           "settings": {
-            "text": "自分を愛し、内なる声に耳を傾ける。自然のエネルギーで本来持っている力を引き出し、自分の意思で生きていけるように…日常に寄り添い、新しい可能性が生まれるよう。自由に… あなたらしく…",
+            "text": "<p>自分を愛し、内なる声に耳を傾ける。<br\/>自然のエネルギーで本来持っている力を引き出し、<br\/>自分の意思で生きていけるように…<br\/>日常に寄り添い、新しい可能性が生まれるよう。<br\/>自由に… あなたらしく… <\/p>",
             "text_style": "body"
           }
         },
@@ -245,6 +253,8 @@
       "settings": {
         "title": "FEATURED ITEMS",
         "heading_size": "h2",
+        "btn_label": "",
+        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",

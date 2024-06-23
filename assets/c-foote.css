@@ -1,0 +1,91 @@
+.footer__content-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer__payment {
+    margin: 0;
+}
+.footer-block--newsletter {
+    margin: 0;
+}
+.footer-block__details-content .list-menu__item {
+    text-decoration: none !important;
+}
+.footer, .footer__content-bottom  {
+    border: 0;
+}
+
+.footer .footer__content-bottom {
+    padding-top: 0;
+}
+.footer__position {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 60px;
+}
+.footer__position .footer__content-top {
+    margin: 0;
+    width: 55%;
+    padding: 0;
+}
+.footer__position .footer__content-bottom {
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+.footer__position .footer__content-bottom  .footer__content-bottom-wrapper {
+    padding: 0;
+    margin: 0;
+}
+.footer__position .footer__content-bottom .footer__column {
+    width: auto;
+}
+
+@media (max-width: 1024px) {
+    .footer-block__details-content .list-menu__item {
+        font-size: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .footer__position {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer__position .footer__content-top {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer__position .footer__content-bottom {
+        width: 100%;
+        justify-content: center;
+    }
+    .footer__position .footer__content-bottom .footer__content-bottom-wrapper {
+        justify-content: center;
+    }
+}
+@media (max-width: 425px) {
+    .footer__position {
+        padding: 0;
+    }
+    .footer__blocks-wrapper {
+        width: 100%;
+    }
+    .footer__blocks-wrapper ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+    }
+    .footer__position .footer__content-bottom .footer__column {
+        padding: 0;
+    }
+    .footer__position .footer__content-bottom .footer__column ul {
+        padding: 0;
+    }
+    .footer-block__details-content .list-menu__item {
+        padding: 0;
+    }
+}

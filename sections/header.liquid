@@ -18,6 +18,8 @@
   {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
 
+
+{{ 'c-header.css'|  asset_url |  stylesheet_tag }}
 <style>
   header-drawer {
     justify-self: start;
@@ -252,9 +254,13 @@
           </localization-form>
         {%- endif -%}
       </div>
+
+      <div class="menu-About">
+        <a class="menu-about-link" href="https://melp.jp/pages/about">ABOUT</a>
+      </div>
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
-      {%- if shop.customer_accounts_enabled -%}
+      
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           <account-icon>
             {%- if customer and customer.has_avatar? -%}
@@ -273,7 +279,7 @@
             -%}
           </span>
         </a>
-      {%- endif -%}
+      
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -629,7 +635,7 @@
       "id": "padding_top",
       "min": 0,
       "max": 36,
-      "step": 4,
+      "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
       "default": 20
@@ -639,7 +645,7 @@
       "id": "padding_bottom",
       "min": 0,
       "max": 36,
-      "step": 4,
+      "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20

@@ -155,7 +155,8 @@
             <div class="facet-filters sorting caption">
               <div class="facet-filters__field">
                 <h2 class="facet-filters__label caption-large text-body">
-                  <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+                  {% comment %} <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label> {% endcomment %}
+                   <label for="SortBy">SORT BY</label>
                 </h2>
                 <div class="select">
                   {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}

@@ -105,7 +105,7 @@
       text-align: right;
     }
     
-    @media (max-width: 400px) {
+    @media (max-width: 425px) {
     .fade-banner-image {
         aspect-ratio: 0.76;
         object-fit: cover;

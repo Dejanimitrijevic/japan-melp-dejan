@@ -51,6 +51,12 @@
   font-size: 1.4rem;
   margin: 0 2rem 0 0;
 }
+.facet-filters__label .label {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Inter;
+  text-transform: uppercase;
+}
 
 .facet-filters__summary {
   display: flex;
@@ -109,6 +115,7 @@
   margin: 0;
   padding-left: 0;
   padding-right: 1.75rem;
+  width: 0;
 }
 
 .facet-filters__sort + .icon-caret {

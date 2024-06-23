@@ -193,7 +193,7 @@
         "type": "range",
         "id": "spacing_grid_vertical",
         "min": 4,
-        "max": 40,
+        "max": 72,
         "step": 4,
         "default": 8,
         "unit": "px",
@@ -1317,9 +1317,21 @@
       },
       {
         "type": "text",
+        "id": "social_email_link",
+        "label": "email",
+        "placeholder": "http://www.email.com/"
+      },
+      {
+        "type": "text",
         "id": "social_instagram_link",
         "label": "t:settings_schema.social-media.settings.social_instagram_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_instagram_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_line_link",
+        "label": "LINE",
+        "placeholder": "http://www.LINE.me/"
       },
       {
         "type": "text",

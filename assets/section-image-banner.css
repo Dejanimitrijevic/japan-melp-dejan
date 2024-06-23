@@ -515,8 +515,12 @@
 .banner__media {
   background-color: transparent;
 }
+.banner__box .banner__heading {
+  font-size: 12px;
+  line-height: 16px;
+}
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .banner__media img {
     width: 100% !important;
     height: 100% !important;    
