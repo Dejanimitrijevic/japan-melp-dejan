@@ -1,0 +1,31 @@
+<div class="featured-collection-all">
+    <div class="all-item-btn page-width">
+        {% if section.settings.btn_label %}
+            <a class="all-item" href="{{ section.settings.btn_link }}">{{ section.settings.btn_label }}</a>
+        {% endif %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "featured collection all",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "btn_label",
+                "label": "Button Label"
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "button Link"
+            }
+        ],
+        "presets": [
+            {
+                "name": "feature collection title"
+            }
+        ]
+    }
+{% endschema %}

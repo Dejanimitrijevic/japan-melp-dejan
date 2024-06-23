@@ -31,8 +31,9 @@ menu-drawer > details[open] > summary::before {
   visibility: hidden;
   z-index: 3;
   left: 0;
-  top: 100%;
-  width: 100%;
+  /* top: 100%; */
+  top: 0;
+  width: 80%;
   padding: 0;
   background-color: rgb(var(--color-background));
   overflow-x: hidden;
@@ -86,6 +87,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__navigation {
   padding: 3rem 0;
+  padding-top: 60px;
 }
 
 .menu-drawer__inner-submenu {
@@ -99,9 +101,9 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  padding: 1.1rem 3rem;
+  padding: 0.85rem 2.5rem;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {

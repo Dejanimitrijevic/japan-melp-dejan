@@ -37,6 +37,7 @@
     left: 50px !important;
     display: flex;
     width: auto;
+    z-index: 1 !important;
 }
 .fade-banner-slider .swiper-pagination span {
     width: 49px;

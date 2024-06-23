@@ -126,8 +126,17 @@
             >
               {{ block.settings.heading }}
             </h2>
+          {% when 'image' %}
+            {% if block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url: width: 175 }}"
+                alt="{{ block.settings.image.alt | escape }}"
+                width="auto"
+                height="auto"
+                loading="lazy"
+              >
+            {% endif %}
           {%- when 'text' -%}
-            {%  render 'sign-icon' %}
             <p class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               {{ block.settings.text }}
             </p>
@@ -470,6 +479,17 @@
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
         }
       ]
+    },
+    {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Sign image"
+        }
+      ]
     }
   ],
   "presets": [
@@ -484,6 +504,9 @@
         },
         {
           "type": "buttons"
+        },
+        {
+          "type": "image"
         }
       ]
     }

@@ -37,33 +37,14 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="news-image-text">
-            <div class="new_image">
-                <img
-                    srcset="
-                      {% if section.settings.img.width >= 350 %}{{ section.settings.img | image_url: width: 350 }} 350w,{% endif %}
-                      {% if section.settings.img.width >= 750 %}{{ section.settings.img | image_url: width: 750 }} 750w,{% endif %}
-                      {% if section.settings.img.width >= 1100 %}{{ section.settings.img | image_url: width: 1100 }} 1100w,{% endif %}
-                      {% if section.settings.img.width >= 1500 %}{{ section.settings.img | image_url: width: 1500 }} 1500w,{% endif %}
-                      {% if section.settings.img.width >= 2200 %}{{ section.settings.img | image_url: width: 2200 }} 2200w,{% endif %}
-                      {% if section.settings.img.width >= 3000 %}{{ section.settings.img | image_url: width: 3000 }} 3000w,{% endif %}
-                      {{ section.settings.img | image_url }} {{ section.settings.img.width }}w
-                    "
-                    src="{{ section.settings.img | image_url: width: 1100 }}"
-                    loading="eager"
-                    fetchpriority="high"
-                    width="auto"
-                    height="auto"
-                    alt="{{ section.settings.img.alt | escape }}"
-                  >
-                  <div class="image_title-text">
-                      {% if section.settings.image_title %}
-                        <h2 class="image_title">{{ section.settings.image_title }}</h2>
-                      {% endif %}
-                      {% if section.settings.img_text %}
-                        <h3 class="image_text">{{ section.settings.img_text }}</h3>
-                      {% endif %}
-                  </div>
+        <div class="news-image-text" style="background-image: url({{ section.settings.img | img_url: 'medium' }})">
+             <div class="image_title-text"  >
+                {% if section.settings.image_title %}
+                <h2 class="image_title">{{ section.settings.image_title }}</h2>
+                {% endif %}
+                {% if section.settings.img_text %}
+                <h3 class="image_text">{{ section.settings.img_text }}</h3>
+                {% endif %}
             </div>
         </div>
     </div>

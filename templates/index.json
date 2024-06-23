@@ -84,8 +84,6 @@
       "settings": {
         "title": "SKIN",
         "heading_size": "h2",
-        "btn_label": "ALL ITEMS",
-        "btn_link": "https:\/\/melp.jp\/collections\/all",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -115,8 +113,6 @@
       "settings": {
         "title": "WEAR",
         "heading_size": "h2",
-        "btn_label": "",
-        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -145,8 +141,6 @@
       "settings": {
         "title": "FOOD",
         "heading_size": "h2",
-        "btn_label": "",
-        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -175,8 +169,6 @@
       "settings": {
         "title": "LIFE",
         "heading_size": "h2",
-        "btn_label": "",
-        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -210,6 +202,12 @@
             "heading_size": "h2"
           }
         },
+        "image_MbMqyd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_413.png"
+          }
+        },
         "text_eWqtWY": {
           "type": "text",
           "settings": {
@@ -231,6 +229,7 @@
       },
       "block_order": [
         "heading_bURiHN",
+        "image_MbMqyd",
         "text_eWqtWY",
         "buttons_4QdaYN"
       ],
@@ -253,8 +252,6 @@
       "settings": {
         "title": "FEATURED ITEMS",
         "heading_size": "h2",
-        "btn_label": "",
-        "btn_link": "",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -330,6 +327,7 @@
       "type": "Meltingpot",
       "settings": {
         "img": "shopify:\/\/shop_images\/DSC5720.png",
+        "mobile_img": "shopify:\/\/shop_images\/Mask_Group_19.png",
         "image_text": "MELTINGPOT"
       }
     }
