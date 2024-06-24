@@ -247,11 +247,16 @@
     },
     "contact": {
       "form": {
-        "name": "名前",
-        "email": "メール",
+        "last_name": "姓",
+        "first_name": "名",
+        "name_label": "お名前",
+        "email": "EMAIL ADDRESS",
+        "email_label": "Email",
         "phone": "電話番号",
-        "comment": "コメント",
-        "send": "送信する",
+        "order_number": "注文番号",
+        "subject": "件名",
+        "comment": "お問い合わせ内容",
+        "send": "送信",
         "post_success": "お問い合わせいただきありがとうございます。早急に返信いたします。",
         "error_heading": "以下を確認してください。",
         "title": "お問い合わせフォーム"

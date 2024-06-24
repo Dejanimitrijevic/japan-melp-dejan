@@ -1,4 +1,5 @@
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+{{ 'c-contact-form.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -15,7 +16,7 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+  <div class="contact c-contact section-{{ section.id }}-padding">
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.heading }}
@@ -51,20 +52,35 @@
           </li>
         </ul>
       {%- endif -%}
+      <h3 class="contact__fields_name">{{ 'templates.contact.form.name_label' | t }}</h3>
       <div class="contact__fields">
         <div class="field">
           <input
             class="field__input"
-            autocomplete="name"
+            autocomplete="given-name"
             type="text"
             id="ContactForm-name"
-            name="contact[{{ 'templates.contact.form.name' | t }}]"
+            name="contact[{{ 'templates.contact.form.last_name' | t }}]"
             value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-            placeholder="{{ 'templates.contact.form.name' | t }}"
+            placeholder="{{ 'templates.contact.form.last_name' | t }}"
           >
-          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
+          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.last_name' | t }}</label>
         </div>
-        <div class="field field--with-error">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="family_name"
+            type="text"
+            id="ContactForm-name"
+            name="contact[{{ 'templates.contact.form.first_name' | t }}]"
+            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            placeholder="{{ 'templates.contact.form.first_name' | t }}"
+          >
+          <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.first_name' | t }}</label>
+        </div>
+      </div>
+      <h3 class="contact-email">{{ 'templates.contact.form.email_label' | t }}</h3>
+      <div class="field field--with-error">
           <input
             autocomplete="email"
             type="email"
@@ -95,8 +111,8 @@
               </span>
             </small>
           {%- endif -%}
-        </div>
       </div>
+      <h3 class="contact-phone">{{ 'templates.contact.form.phone' | t }}</h3>
       <div class="field">
         <input
           type="tel"
@@ -108,8 +124,36 @@
           value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
           placeholder="{{ 'templates.contact.form.phone' | t }}"
         >
-        <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
+        {% comment %} <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label> {% endcomment %}
       </div>
+      <h3 class="contact-phone">{{ 'templates.contact.form.order_number' | t }}</h3>
+      <div class="field">
+        <input
+          type="tel"
+          id="ContactForm-order-number"
+          class="field__input"
+          autocomplete="tel"
+          name="contact[{{ 'templates.contact.form.order_number' | t }}]"
+          pattern="[0-9\-]*"
+          value="{% if form.order_number %}{{ form.order_number }}{% elsif customer %}{{ customer.oreder_number }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.order_number' | t }}"
+        >
+        {% comment %} <label class="field__label" for="ContactForm-order_number">{{ 'templates.contact.form.order_number' | t }}</label> {% endcomment %}
+      </div>
+      <h3 class="contact-subject">{{ 'templates.contact.form.subject' | t }}</h3>
+      <div class="field">
+        <input
+          class="field__input"
+          autocomplete="subject"
+          type="text"
+          id="ContactForm-name"
+          name="contact[{{ 'templates.contact.form.subject' | t }}]"
+          value="{% if form.subject %}{{ form.subject }}{% elsif customer %}{{ customer.subject }}{% endif %}"
+          placeholder="{{ 'templates.contact.form.subject' | t }}"
+        >
+        {% comment %} <label class="field__label" for="ContactForm-subject">{{ 'templates.contact.form.subject' | t }}</label> {% endcomment %}
+      </div>
+      <h3 class="contact-comment">{{- 'templates.contact.form.comment' | t -}}</h3>
       <div class="field">
         <textarea
           rows="10"
@@ -120,9 +164,9 @@
         >
           {{- form.body -}}
         </textarea>
-        <label class="form__label field__label" for="ContactForm-body">
+        {% comment %} <label class="form__label field__label" for="ContactForm-body">
           {{- 'templates.contact.form.comment' | t -}}
-        </label>
+        </label> {% endcomment %}
       </div>
       <div class="contact__button">
         <button type="submit" class="button">

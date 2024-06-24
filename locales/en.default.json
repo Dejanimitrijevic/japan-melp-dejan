@@ -248,9 +248,14 @@
     "contact": {
       "form": {
         "title": "Contact form",
-        "name": "Name",
-        "email": "Email",
+        "last_name": "last name",
+        "first_name": "first_name",
+        "name_label": "Your Name",
+        "email": "Email address",
+        "email_label": "Email",
         "phone": "Phone number",
+        "order_number": "Order number",
+        "subject": "subject",
         "comment": "Comment",
         "send": "Send",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
