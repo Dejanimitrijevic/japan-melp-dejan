@@ -1,0 +1,50 @@
+.transaction-container {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.transaction-container .title {
+    margin: 67px 0;
+    font-family: Hiragino Sans;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.025em;
+}
+.transaction-container .items  {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.transaction-container .items .item-wrapper {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+.transaction-container .items .item {
+    border-bottom: 1px dotted #A39D9B;
+}
+.transaction-container .items .item-wrapper  h3 {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0;
+    padding-bottom: 3px;
+}
+@media (max-width: 768px) {
+    .transaction-container .items .item-wrapper {
+        width: 100%;
+    }
+}
+@media (max-width: 425px) {
+    .transaction-container {
+        padding: 0 25px;
+        margin-bottom: 75px;
+    }
+    .transaction-container .title {
+        margin: 45px 0;
+        font-size: 20px;
+    }
+    .transaction-container .items .item-wrapper  h3 {
+        font-size: 12px;
+    }
+}

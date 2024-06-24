@@ -38,7 +38,7 @@
     }
 }
 @media (max-width: 425px) {
-    .multi-container {
+    .multi-text .multi-container {
         padding: 0 25px;
     }
 }
