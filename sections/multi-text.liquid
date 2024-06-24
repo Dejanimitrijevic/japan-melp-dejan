@@ -1,0 +1,66 @@
+{{ 'c-multi-text.css' |  asset_url |  stylesheet_tag }}
+
+<div class="multi-text">
+    <div class="multi-container">
+        {% if section.settings.title %}
+            <h1>{{ section.settings.title }}</h1>
+        {% endif %}
+
+        <div class="blocks">
+            {% for block in section.blocks %}
+                {% if block.type == 'block' %}
+                    <div class="block">
+                        {% if block.settings.title %}
+                            <h3>{{ block.settings.title }}</h3>
+                        {% endif %}
+                        {% if block.settings.text %}
+                            {{ block.settings.text }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Multi text",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Multi text",
+                "blocks": [
+                    {
+                        "type": "block"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
