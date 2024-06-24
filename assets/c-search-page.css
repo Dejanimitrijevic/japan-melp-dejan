@@ -1,0 +1,23 @@
+.c-search-page-header {
+    font-family: Semplicita Pro;
+    font-size: 30px;
+    letter-spacing: 0.025px;
+    line-height: 40px;
+    padding-top: 65px;
+    padding-bottom: 0;
+}
+.template-search .facets__form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.template-search .facets__form .product-count {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .facets-container  .mobile-facets__wrapper {
+        display: none;
+    }
+}

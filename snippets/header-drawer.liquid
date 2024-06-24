@@ -6,6 +6,8 @@
 {% endcomment %}
 
 {{ 'c-header-drawer.css' |  asset_url |  stylesheet_tag }}
+<script src="{{ 'menu-draw-accodion.js' | asset_url }}" defer="defer"></script>
+
 
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -29,26 +31,9 @@
               {%- for link in section.settings.menu.links -%}
                 <li>
                   {%- if link.links != blank -%}
-                    <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                      {% comment %} <summary
-                        id="HeaderDrawer-{{ link.handle }}"
-                        class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}"
-                      >
-                        {{ link.title | escape }}
-                        {% render 'icon-arrow' %}
-                        {% render 'icon-caret' %}
-                      </summary> {% endcomment %}
-                      <div
-                        id="link-{{ link.handle | escape }}"
-                        class="menu-drawer__submenu has-submenu gradient motion-reduce"
-                        tabindex="-1"
-                      >
-                        <div class="menu-drawer__inner-submenu">
-                          <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
-                            {% render 'icon-arrow' %}
-                            {{ link.title | escape }}
-                          </button>
-                          <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+                    <div class="accordion menu-drawer__menu-item list-menu__item link link--text focus-inset">{{ link.title |  escape }}</div>
+
+                    <ul class="panel menu-drawer__menu list-menu" role="list" tabindex="-1">
                             {%- for childlink in link.links -%}
                               <li>
                                 {%- if childlink.links == blank -%}
@@ -108,10 +93,7 @@
                                 {%- endif -%}
                               </li>
                             {%- endfor -%}
-                          </ul>
-                        </div>
-                      </div>
-                    </details>
+                    </ul>
                   {%- else -%}
                     <a
                       id="HeaderDrawer-{{ link.handle }}"
@@ -125,6 +107,9 @@
                     </a>
                   {%- endif -%}
                 </li>
+
+                
+                  
               {%- endfor -%}
             </ul>
 

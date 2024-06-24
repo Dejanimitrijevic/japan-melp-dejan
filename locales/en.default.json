@@ -428,7 +428,8 @@
       "title": "Login",
       "sign_in": "Sign in",
       "submit": "Submit",
-      "alternate_provider_separator": "or"
+      "alternate_provider_separator": "or",
+      "put_email_password": "Please enter your email and password."
     },
     "order": {
       "title": "Order {{ name }}",
@@ -477,7 +478,11 @@
       "last_name": "Last name",
       "email": "Email",
       "password": "Password",
-      "submit": "Create"
+      "submit": "Create",
+      "put_new_data": "Please enter your name, email and password.",
+      "role_law_first": "you agree to the",
+      "role_law_middle": "Terms of Use and Privacy & Cookie Policy, ",
+      "role_law_end": "By registering your information."
     },
     "reset_password": {
       "title": "Reset account password",

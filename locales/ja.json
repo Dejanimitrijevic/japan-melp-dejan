@@ -224,8 +224,8 @@
       "products": "商品管理",
       "search_for": "「{{ terms }}」を検索",
       "results_with_count_and_term": {
-        "one": "「{{ terms }}」の検索結果{{ count }}件",
-        "other": "「{{ terms }}」の検索結果{{ count }}件"
+        "one": "`{{ terms }}`の検索結果{{ count }}件",
+        "other": "`{{ terms }}`の検索結果{{ count }}件"
       },
       "results_pages_with_count": {
         "one": "{{ count }}ページ",
@@ -425,10 +425,11 @@
       "guest_continue": "続行",
       "guest_title": "ゲストとして続行する",
       "password": "パスワード",
-      "title": "ログイン",
+      "title": "ログインする",
       "sign_in": "ログイン",
       "submit": "送信",
-      "alternate_provider_separator": "または"
+      "alternate_provider_separator": "または",
+      "put_email_password": "メール、パスワードを入力してください。"
     },
     "orders": {
       "title": "注文履歴",
@@ -446,12 +447,17 @@
       "success": "パスワードを更新するためのリンクが記載されたメールを送信しました。"
     },
     "register": {
-      "title": "アカウントを作成する",
+      "title": "新規会員登録",
       "first_name": "名",
       "last_name": "姓",
       "email": "メール",
       "password": "パスワード",
-      "submit": "作成する"
+      "submit": "作成する",
+      "put_new_data": "お名前、メール、パスワードを入力してください。",
+      "role_law_first": "お客様情報の登録をもって",
+      "role_law_middle": "利用規約とプライバシー＆クッキーポリシー",
+      "role_law_end": "に同意したものとみなされます"
+      
     },
     "reset_password": {
       "title": "アカウントのパスワードをリセットする",

@@ -2505,7 +2505,7 @@ product-info .loading__spinner:not(.hidden) ~ *,
 
 .header__icon:not(.header__icon--summary),
 .header__icon span {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
 }
@@ -2586,6 +2586,7 @@ menu-drawer + .header__search {
 .header__search {
   display: inline-flex;
   line-height: 0;
+  z-index: 2;
 }
 
 .header--top-center > .header__search {

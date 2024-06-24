@@ -5,7 +5,7 @@
     row-gap: 75px;
 }
 .brand-mark img {
-    width: max-content;
+    width: 100%;
 }
 .brand-list-container {
     padding-left: 50px;
@@ -19,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 92px;
 }
 .brand-list-container .title {
     font-size: 30px;
@@ -28,6 +27,8 @@
     margin: 0;
     margin-bottom: 65px;
 }
+
+
 @media (max-width: 1200px) {
     .brand-list .brand-list-container .brand-pixel-grid {
         grid-template-columns: 1fr 1fr 1fr;
@@ -41,5 +42,15 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 15px;
         row-gap: 50px;
+    }
+    
+}
+@media (max-width: 425px) {
+    .brand-item-container {
+        padding: 7px;
+    }
+    .brand-list-container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }

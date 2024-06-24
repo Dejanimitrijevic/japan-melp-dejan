@@ -719,20 +719,23 @@
         </div>
       {% endif %}
 
-      <div class="brand">
-        <div class="detail-header">
-            {%  render 'product-detail-li-icon' %}
-            <h3 class="detail--title">BRAND</h3>
-          </div>
-          <div class="brand-detail">
-            {% assign metaobject = product.metafields.custom.brand.value %}
-            <script>console.log("metaobject", {{ metaobject |  json }})</script>
-              <p class="brand_information">{{ metaobject.information }}</p>            
-              <a class="mark" href="{{ metaobject.mark_url.value }}">
-                {{ metaobject.mark | img_tag }}
-              </a>
-          </div>            
-      </div>
+
+      {% if product.metafields.custom.brand != blank %}
+        <div class="brand">
+          <div class="detail-header">
+              {%  render 'product-detail-li-icon' %}
+              <h3 class="detail--title">BRAND</h3>
+            </div>
+            <div class="brand-detail">
+              {% assign metaobject = product.metafields.custom.brand.value %}
+              <script>console.log("metaobject", {{ metaobject |  json }})</script>
+                <p class="brand_information">{{ metaobject.information }}</p>            
+                <a class="mark" href="{{ metaobject.mark_url.value }}">
+                  {{ metaobject.mark | img_tag }}
+                </a>
+            </div>            
+        </div>
+      {% endif %}
 
 
     {% render 'product-media-modal', variant_images: variant_images %}

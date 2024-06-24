@@ -32,3 +32,39 @@ account-icon {
 .header__icons .cart-count-bubble span {
     color: white;
 }
+
+.header-draw-with-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.header-draw-with-search summary {
+    display: flex;
+    align-items: center;
+}
+.header-draw-with-search .mobile-header-search {
+    display: none;
+}
+.header__search summary span {
+    padding: 0;
+}
+.header__search summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-draw-with-search .header__search summary {
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .header .menu-About {
+        display: none;
+    }
+    .desktop-header-search {
+        display: none;
+    }
+    .header-draw-with-search .mobile-header-search {
+        display: flex;
+    }
+}

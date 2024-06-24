@@ -79,6 +79,13 @@
         "fade_effect_speed": 5
       }
     },
+    "featured_collection_all_CnPaWg": {
+      "type": "featured-collection-all",
+      "settings": {
+        "btn_label": "ALL ITEMS",
+        "btn_link": "https:\/\/melp.jp\/collections\/all"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -103,8 +110,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 44,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "featured_collection_LNXQrB": {
@@ -132,8 +139,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "featured_collection_76c6kX": {
@@ -160,8 +167,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "featured_collection_q37Ei3": {
@@ -188,8 +195,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 0
       }
     },
     "image_banner_YLzP3g": {
@@ -334,6 +341,7 @@
   },
   "order": [
     "c_fade_banner_slider_aC3GAz",
+    "featured_collection_all_CnPaWg",
     "featured_collection",
     "featured_collection_LNXQrB",
     "featured_collection_76c6kX",
