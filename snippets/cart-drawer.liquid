@@ -18,8 +18,8 @@
     visibility: hidden;
   }
 </style>
-
-<cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
+{% assign full_url = request.host | append: request.path |  handleize |  upcase |  remove: '-'  %}
+<cart-drawer class="{% if full_url == "MELPJP"%}cart-draw-position-home{% else %}cart-draw-position{% endif %} drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div

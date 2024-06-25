@@ -56,6 +56,9 @@ account-icon {
 .header-draw-with-search .header__search summary {
     justify-content: flex-start;
 }
+.header {
+    box-shadow: -1px 3px 20px 0px #0000002e, 0px 6px 6px -14px rgba(112, 112, 112, 0.32);
+}
 
 @media (max-width: 768px) {
     .header .menu-About {
@@ -66,5 +69,11 @@ account-icon {
     }
     .header-draw-with-search .mobile-header-search {
         display: flex;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-draw-with-search .header__search summary {
+        justify-content: center;
     }
 }

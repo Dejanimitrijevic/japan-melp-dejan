@@ -125,4 +125,10 @@
     .fade-banner-slider h2 {
       font-size: 16px;
     }
+    .fade-banner-slider h2 {
+      line-height: 22px;
+    }
+    .fade-banner-slider .btn {
+      padding-top: 10px;
+    }
   }

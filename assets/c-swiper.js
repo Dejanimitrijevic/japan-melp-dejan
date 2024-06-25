@@ -51,9 +51,9 @@
             clickable: true,
         },
         loop: true,
-        // autoplay: {
-        //     delay: sliderRangeDelay,
-        // },
+        autoplay: {
+            delay: sliderRangeDelay,
+        },
         speed: fadeEffectSpeed
   }
 

@@ -1,5 +1,8 @@
-cart-drawer.drawer {
+cart-drawer.cart-draw-position-home {
     top: 90px;
+}
+cart-drawer.cart-draw-position {
+    top: 56px;
 }
 cart-drawer .cart-drawer {
     position: absolute;
@@ -109,7 +112,8 @@ cart-drawer .cart__ctas button::after {
     cart-drawer .cart-drawer {
         height: 100vh;
     }
-    cart-drawer.drawer {
+    cart-drawer.cart-draw-position-home,
+    cart-drawer.cart-draw-position {
         top: 0;
     }
 }

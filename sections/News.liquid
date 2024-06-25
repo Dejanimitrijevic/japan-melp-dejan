@@ -37,14 +37,16 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="news-image-text" style="background-image: url({{ section.settings.img | img_url: 'medium' }})">
-             <div class="image_title-text"  >
-                {% if section.settings.image_title %}
-                <h2 class="image_title">{{ section.settings.image_title }}</h2>
-                {% endif %}
-                {% if section.settings.img_text %}
-                <h3 class="image_text">{{ section.settings.img_text }}</h3>
-                {% endif %}
+        <div class="news-image-text-wrapper">
+            <div class="news-image-text" style="background-image: url({{ section.settings.img | img_url: 'medium' }})">
+                 <div class="image_title-text"  >
+                    {% if section.settings.image_title %}
+                    <h2 class="image_title">{{ section.settings.image_title }}</h2>
+                    {% endif %}
+                    {% if section.settings.img_text %}
+                    <h3 class="image_text">{{ section.settings.img_text }}</h3>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

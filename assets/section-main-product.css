@@ -58,12 +58,13 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
+    padding-right: 5rem;
     max-width: 50%;
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
-    padding: 0 0 0 10rem;
+    padding: 0 0 0 5rem;
     max-width: 50%;
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
