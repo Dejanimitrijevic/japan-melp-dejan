@@ -1,0 +1,76 @@
+.allnews .allnews-title {
+    padding: 0 50px;
+    font-size: 30px;
+    font-family: Semplicita Pro;
+    letter-spacing: 0.025em;
+    line-height: 30px;
+    margin: 67px 0;
+}
+.allnews-container {
+    padding: 0 255px;
+}
+.allnews-container .block .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    border-bottom: 1px solid #707070;
+}
+
+.allnews-container .block .header h3 {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 5px 0 11px;
+}
+.allnews-container .block .content p {
+    font-size: 14px;
+    line-height: 30px;
+    font-family: Hiragino Kaku Gothic ProN;
+}
+.allnews-container .block .content {
+    margin-top: 37px;
+    margin-bottom: 67px;
+}
+.allnews-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+.allnews-btn a {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+@media (max-width: 768px) {
+    .allnews-container {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 425px) {
+    .allnews .allnews-title {
+        padding: 0 25px;
+        font-size: 20px;
+        margin-bottom: 54px;
+    }
+    .allnews-container {
+        padding: 0 25px;
+    }
+    .allnews-container .header .data {
+        font-size: 10px;
+    }
+    .allnews-btn {
+        justify-content: center;
+    }
+    .allnews-container .block .header h3 {
+        font-size: 14px;
+    }
+    .allnews-container .block .content {
+        margin-top: 28px;
+    }
+    .allnews-container .block .content p {
+        font-size: 12px;
+    }
+    .allnews-btn a {
+        font-size: 12px;
+    }
+}

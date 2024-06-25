@@ -1,0 +1,108 @@
+{{ 'c-news-page.css' | asset_url |  stylesheet_tag }} 
+<div class="allnews color-{{ section.settings.color_scheme }}">
+    {% if section.settings.title %}
+        <h1 class="allnews-title">{{ section.settings.title }}</h1>
+    {% endif %}
+    <div class="allnews-container">
+        <div class="blocks">
+            {% for block in section.blocks %}
+                {% if block.type == 'block' %}
+                    <div class="block">
+                        <div class="header">
+                            {% if block.settings.data %}
+                                <span class="data">{{ block.settings.data }}</span>
+                            {% endif %}
+                            {% if block.settings.title %}
+                                <h3 class="subtitle">
+                                    {{ block.settings.title }}
+                                </h3>
+                            {% endif %}
+                        </div>
+                        {% if block.settings.content %}
+                            <h3 class="content">{{ block.settings.content }}</h3>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {%- if section.settings.btn_label != blank -%}
+            <div class="allnews-btn">
+                <a
+                    {% if section.settings.btn_link == blank %}
+                    role="link" aria-disabled="true"
+                    {% else %}
+                    href="{{ section.settings.btn_link }}"
+                    {% endif %}
+                    class="button{% if section.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                >
+                    {{- section.settings.btn_label | escape -}}
+                </a>
+            </div>
+        {%- endif -%}
+    </div>
+    
+</div>
+
+
+{% schema %}
+    {
+        "name": "All news",
+        "class": "section",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "t:sections.all.colors.label",
+                "default": "scheme-1"
+            },
+            {
+                "type": "text",
+                "id": "btn_label",
+                "label": "Button Label"
+            },
+            {
+                "type": "url",
+                "id": "btn_link",
+                "label": "Button Link"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "data",
+                        "label": "Data"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "content",
+                        "label": "Content"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "All news",
+                "blocks": [
+                    {
+                        "type": "block"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
