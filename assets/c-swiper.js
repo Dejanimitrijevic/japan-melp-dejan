@@ -17,7 +17,7 @@
       el: ".swiper-scrollbar",
       dragSize: 87,
     },
-    mousewheel: true,
+    mousewheel: false,
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',

@@ -3,6 +3,7 @@ var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
+    this.classList.toggle("tochangeminus");
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
@@ -12,3 +13,6 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+//  in menu-draw, icon changes from plus to minus

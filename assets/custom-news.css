@@ -30,7 +30,7 @@
     font-size: 10px;
 }
 .block_border--bottom {
-  border: 1px solid #707070;
+  border-bottom: 1px solid #707070;
 }
 .news .container {
     padding: 152px 0;

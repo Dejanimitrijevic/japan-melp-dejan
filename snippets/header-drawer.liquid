@@ -31,7 +31,13 @@
               {%- for link in section.settings.menu.links -%}
                 <li>
                   {%- if link.links != blank -%}
-                    <div class="accordion menu-drawer__menu-item list-menu__item link link--text focus-inset">{{ link.title |  escape }}</div>
+                    <div class="accordion menu-drawer__menu-item list-menu__item link link--text focus-inset">
+                      {{ link.title |  escape }}
+                      <div class="plusminus">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      </div>
 
                     <ul class="panel menu-drawer__menu list-menu" role="list" tabindex="-1">
                             {%- for childlink in link.links -%}

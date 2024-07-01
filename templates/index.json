@@ -39,7 +39,7 @@
           "type": "slider",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/Mask_Group_15.png",
+            "image": "shopify:\/\/shop_images\/IMG_0988.webp",
             "box_align": "middle-center",
             "desktop_content_alignment": "center",
             "show_text_box": true,
@@ -55,15 +55,15 @@
           "type": "slider",
           "settings": {
             "color_scheme": "",
-            "image": "shopify:\/\/shop_images\/Mask_Group_15.png",
+            "image": "shopify:\/\/shop_images\/IMG_1141_2179a0ec-c2d6-445a-a123-bab18f0496c4.jpg",
             "box_align": "middle-center",
             "desktop_content_alignment": "center",
             "show_text_box": true,
-            "title": "No03 FACE\/LIP BALM",
+            "title": "",
             "heading_size": "h1",
-            "sub_title": "フェイス&リップバーム",
-            "btn_label": "BUY",
-            "btn_link": "shopify:\/\/products\/no01-all-in-1-facetoner-オールインワン-フェイストナー",
+            "sub_title": "",
+            "btn_label": "",
+            "btn_link": "",
             "button_style_secondary": false
           }
         }
@@ -226,7 +226,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "REDE MORE",
-            "button_link_1": "",
+            "button_link_1": "shopify:\/\/pages\/brand-list",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
