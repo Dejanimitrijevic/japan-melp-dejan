@@ -292,6 +292,7 @@ Shopify.postLink = function (path, options) {
   }
   document.body.appendChild(form);
   form.submit();
+
   document.body.removeChild(form);
 };
 

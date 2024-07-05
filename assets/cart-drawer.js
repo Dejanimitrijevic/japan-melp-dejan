@@ -83,6 +83,38 @@ class CartDrawer extends HTMLElement {
       this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
       this.open();
     });
+
+    setTimeout(() => {
+      if (this.querySelector('.upsell-productitems')) {
+        new Swiper(this.querySelector('.upsell-productitems'), {
+          loop: true,
+          loopedSlides: 1,
+          slidesPerView: 2.5,
+          spaceBetween: 15,
+          centeredSlides: false,
+          freeMode: true,
+          scrollbar: {
+            el: ".swiper-scrollbar",
+            dragSize: 87,
+          },
+          mousewheel: false,
+          breakpoints: {
+            0: {
+              slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+            767: {
+              slidesPerView: 2.5,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 2.5,
+              spaceBetween: 15,
+            },
+          }
+        });
+      }
+    }, 2000);
   }
 
   getSectionInnerHTML(html, selector = '.shopify-section') {

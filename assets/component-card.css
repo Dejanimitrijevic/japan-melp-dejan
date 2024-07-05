@@ -305,6 +305,14 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+@media (min-width: 425px) {
+  .card__content .card__information .card__heading {
+    font-size: 14px;
+  }
+  .card_content .card__information .price__container {
+    font-size: 14px;
+  }
+}
 
 .card__heading:last-child {
   margin-bottom: 0;

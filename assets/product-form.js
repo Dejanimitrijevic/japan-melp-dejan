@@ -4,7 +4,6 @@ if (!customElements.get('product-form')) {
     class ProductForm extends HTMLElement {
       constructor() {
         super();
-
         this.form = this.querySelector('form');
         this.form.querySelector('[name=id]').disabled = false;
         this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
@@ -12,11 +11,13 @@ if (!customElements.get('product-form')) {
         this.submitButton = this.querySelector('[type="submit"]');
 
         if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
-
         this.hideErrors = this.dataset.hideErrors === 'true';
       }
+    
+
 
       onSubmitHandler(evt) {
+        
         evt.preventDefault();
         if (this.submitButton.getAttribute('aria-disabled') === 'true') return;
 
@@ -97,7 +98,10 @@ if (!customElements.get('product-form')) {
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading__spinner').classList.add('hidden');
           });
+          
       }
+
+
 
       handleErrorMessage(errorMessage = false) {
         if (this.hideErrors) return;

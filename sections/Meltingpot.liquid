@@ -1,35 +1,39 @@
 
 <style>
+    .meltingpot {
+        position: relative;
+    }
     .meltingpot .contain {
         position: relative;
         margin: 0;
     }
-    .meltingpot svg {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        padding: 0 50px;
+    .meltingpot .contain .desktop {
+        display: flex;
     }
     .meltingpot .mobile {
         display: none;
     }
+    .meltingpot .text-image {
+        position: absolute;
+        bottom: 70px;
+        padding-left: 48px;
+        padding-right: 50px;
+        width: 100%;
+    }
     @media (max-width: 425px) {
         .meltingpot .mobile {
-            display: block;
+            display: flex;
         }
-        .meltingpot .desktop {
+        .meltingpot .contain .desktop {
             display: none;
         }
-        .meltingpot .mobile {
-            bottom: 5%;
+        .meltingpot .text-image {
+            bottom: 23.8px;
+            padding-left: 25px;
+            padding-left: 25px;
         }
     }
 </style>
-
-
-
 <div class="meltingpot">
     <div class="contain">
         {% if section.settings.img %}
@@ -68,12 +72,27 @@
                 height="auto"
                 alt="{{ section.settings.img.alt | escape }}"
                 class="mobile"
-              >
-              
-                  {%  render 'meltingpot-icon' %}
-              
+              > 
         {% endif %}
     </div>
+    <img
+        srcset="
+            {% if section.settings.text_image.width >= 350 %}{{ section.settings.text_image | image_url: width: 350 }} 350w,{% endif %}
+            {% if section.settings.text_image.width >= 750 %}{{ section.settings.text_image | image_url: width: 750 }} 750w,{% endif %}
+            {% if section.settings.text_image.width >= 1100 %}{{ section.settings.text_image | image_url: width: 1100 }} 1100w,{% endif %}
+            {% if section.settings.text_image.width >= 1500 %}{{ section.settings.text_image | image_url: width: 1500 }} 1500w,{% endif %}
+            {% if section.settings.text_image.width >= 2200 %}{{ section.settings.text_image | image_url: width: 2200 }} 2200w,{% endif %}
+            {% if section.settings.text_image.width >= 3000 %}{{ section.settings.text_image | image_url: width: 3000 }} 3000w,{% endif %}
+            {{ section.settings.text_image | image_url }} {{ section.settings.text_image.width }}w
+        "
+        src="{{ section.settings.text_image | image_url: width: 1100 }}"
+        loading="eager"
+        fetchpriority="high"
+        width="auto"
+        height="auto"
+        alt="{{ section.settings.img.alt | escape }}"
+        class="text-image"
+        >
 </div>
 
 
@@ -97,6 +116,11 @@
                 "id": "image_text",
                 "label": "Text",
                 "default": "MELTINGPOT"
+            },
+            {
+                "type": "image_picker",
+                "id": "text_image",
+                "label": "Text"
             }
         ],
         "presets": [

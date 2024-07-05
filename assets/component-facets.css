@@ -51,6 +51,11 @@
   font-size: 1.2rem;
   margin: 0 2rem 0 0;
 }
+@media (min-width: 1024px) {
+  .facet-filters__label {
+    font-size: 14px;
+  }
+}
 .facet-filters__label .label {
   font-size: 12px;
   line-height: 16px;

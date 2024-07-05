@@ -103,11 +103,52 @@ cart-drawer .cart__ctas button::after {
     box-shadow: none;
 }
 
+.upsell-product-detail--informaion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100px;
+}
+.upsell-productitems .upsell-product-item {
+    padding: 14px 13px;
+    border: 1px solid #707070;
+    display: flex;
+    gap: 13px;
+}
+.upsell-product-detail--img {
+    display: flex;
+}
 
-@media (max-width: 425px) {
+.upsell-product--title,
+.upsell-product--price {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: Hiragino Kaku Gothic ProN;
+}
+.upsell-productitems  {
+    padding: 40px 0;
+    margin-bottom: 45px;
+}
+.upsell-product-items--title {
+    font-family: Hiragino Kaku Gothic ProN;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.cart-drawer .drawer__inner {
+    padding: 0 5rem;
+}
+.upsell-productitems .swiper-wrapper {
+    padding-top: 5px;
+}
+
+@media (max-width: 768px) {
     cart-drawer .cart-drawer .drawer__inner {
         width: 100%;
         max-width: 100vw;
+        padding: 0 2.5rem;
+        overflow: scroll;
     }
     cart-drawer .cart-drawer {
         height: 100vh;
@@ -115,5 +156,8 @@ cart-drawer .cart__ctas button::after {
     cart-drawer.cart-draw-position-home,
     cart-drawer.cart-draw-position {
         top: 0;
+    }
+    cart-drawer-items {
+        overflow: unset !important;
     }
 }

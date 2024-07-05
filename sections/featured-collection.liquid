@@ -4,6 +4,8 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'c-featured-collection.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'c-featured-collection-swiper.js' | asset_url }}" defer="defer"></script>
+
 
 {% if section.settings.image_shape == 'blob' %}
   {{ 'mask-blobs.css' | asset_url | stylesheet_tag }}
@@ -31,12 +33,20 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+  .section-{{ section.id }}-padding-row {
+    padding-left: {{ section.settings.padding_left |  times: 0.75 | round: 0 }}px;
+    padding-right: {{ section.settings.padding_right |  times: 0.75 |  round: 0 }}px;
+  }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+  }
+  .section-{{ section.id }}-padding-row {
+    padding-left: {{ section.settings.padding_left }}px;
+    padding-right: {{ section.settings.padding_right }}px;
   }
 {%- endstyle -%}
 
@@ -64,7 +74,7 @@
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
   <div
-    class="collection page-width {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
+    class="collection {% if section.settings.page_width %}page-width{% else %} section-{{ section.id }}-padding-row {% endif %} {% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
     id="collection-{{ section.id }}"
     data-id="{{ section.id }}"
   >
@@ -220,6 +230,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "page_width",
+      "label": "Page width",
+      "default": false
+    },
     {
       "type": "inline_richtext",
       "id": "title",
@@ -504,7 +520,33 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "padding if not page-width"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding left",
+      "info": "padding left setting work if width not page width",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding right",
+      "default": 50
     }
+    
   ],
   "presets": [
     {

@@ -288,6 +288,7 @@
       "caption": "Cart items",
       "footer_text": "Your order is not yet complete. Please note availability. Shipping costs vary depending on your location.",
       "remove_title": "Remove {{ title }}",
+      "upsell_title": "ご一緒にいかがですか？",
       "estimated_total": "Estimated total",
       "new_estimated_total": "New estimated total",
       "note": "Order special instructions",

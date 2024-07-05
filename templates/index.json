@@ -82,13 +82,17 @@
     "featured_collection_all_CnPaWg": {
       "type": "featured-collection-all",
       "settings": {
+        "page_width": false,
         "btn_label": "ALL ITEMS",
-        "btn_link": "https:\/\/melp.jp\/collections\/all"
+        "btn_link": "https:\/\/melp.jp\/collections\/all",
+        "padding_left": 50,
+        "padding_right": 50
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
+        "page_width": false,
         "title": "SKIN",
         "heading_size": "h2",
         "description": "",
@@ -111,13 +115,16 @@
         "columns_mobile": "2",
         "swipe_on_mobile": true,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "padding_left": 50,
+        "padding_right": 50
       }
     },
     "featured_collection_LNXQrB": {
       "type": "featured-collection",
       "disabled": true,
       "settings": {
+        "page_width": false,
         "title": "WEAR",
         "heading_size": "h2",
         "description": "",
@@ -140,12 +147,15 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "padding_left": 50,
+        "padding_right": 50
       }
     },
     "featured_collection_76c6kX": {
       "type": "featured-collection",
       "settings": {
+        "page_width": false,
         "title": "FOOD",
         "heading_size": "h2",
         "description": "",
@@ -168,12 +178,15 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "padding_left": 50,
+        "padding_right": 50
       }
     },
     "featured_collection_q37Ei3": {
       "type": "featured-collection",
       "settings": {
+        "page_width": false,
         "title": "LIFE",
         "heading_size": "h2",
         "description": "",
@@ -196,7 +209,9 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 72,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "padding_left": 50,
+        "padding_right": 50
       }
     },
     "image_banner_YLzP3g": {
@@ -257,6 +272,7 @@
     "featured_collection_Xg6iaP": {
       "type": "featured-collection",
       "settings": {
+        "page_width": false,
         "title": "FEATURED ITEMS",
         "heading_size": "h2",
         "description": "",
@@ -279,7 +295,9 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "padding_left": 50,
+        "padding_right": 50
       }
     },
     "news_CrhbnB": {
@@ -335,7 +353,8 @@
       "settings": {
         "img": "shopify:\/\/shop_images\/DSC5720.png",
         "mobile_img": "shopify:\/\/shop_images\/Mask_Group_19.png",
-        "image_text": "MELTINGPOT"
+        "image_text": "MELTINGPOT",
+        "text_image": "shopify:\/\/shop_images\/Group_421.png"
       }
     }
   },

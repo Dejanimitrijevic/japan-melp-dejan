@@ -1449,6 +1449,11 @@
         "label": "t:settings_schema.cart.settings.cart_type.label"
       },
       {
+        "type": "richtext",
+        "id": "draw_footer_text",
+        "label": "Draw Footer Text"
+      },
+      {
         "type": "checkbox",
         "id": "show_vendor",
         "label": "t:settings_schema.cart.settings.show_vendor.label",
