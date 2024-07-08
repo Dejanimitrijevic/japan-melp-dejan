@@ -122,7 +122,6 @@
     },
     "featured_collection_LNXQrB": {
       "type": "featured-collection",
-      "disabled": true,
       "settings": {
         "page_width": false,
         "title": "WEAR",
@@ -133,7 +132,7 @@
         "collection": "wear",
         "products_to_show": 12,
         "columns_desktop": 4,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
@@ -272,7 +271,7 @@
     "featured_collection_Xg6iaP": {
       "type": "featured-collection",
       "settings": {
-        "page_width": false,
+        "page_width": true,
         "title": "FEATURED ITEMS",
         "heading_size": "h2",
         "description": "",

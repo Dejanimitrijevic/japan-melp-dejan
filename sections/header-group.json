@@ -8,7 +8,7 @@
         "announcement_XrWGh3": {
           "type": "announcement",
           "settings": {
-            "text": "送料全国一律000円（税込00,000円以上で無料）",
+            "text": "送料全国一律700円（税込15,000円以上で無料）",
             "link": ""
           }
         }
@@ -42,12 +42,13 @@
         "link_list_RBW6QY"
       ],
       "settings": {
+        "page_width": false,
         "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-f7a8e636-0438-4246-a3c2-5a73a6f1cabb",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": false,
         "enable_language_selector": false,

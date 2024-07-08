@@ -2,6 +2,9 @@
 
 
 {% style %}
+    .bg-{{ section.id }} {
+        background-color: {{ section.settings.brand_bg }};
+    
     .brand-grid--1 {
         grid-template-columns: 1fr;
     }
@@ -34,7 +37,7 @@
     }
   }
 {% endstyle %}
-<div class="brand-list">
+<div class="brand-list bg-{{ section.id }}">
     <div class="brand-list-container section-{{ section.id }}-padding">
         {% if section.settings.title %}
             <h1 class="title">{{ section.settings.title }}</h1>
@@ -94,6 +97,12 @@
         "class": "section",
         "settings": [
             {
+                "type": "color_background",
+                "id": "brand_bg",
+                "label": "Background",
+                "default": "#fdf9f1"
+            },
+            {
                 "type": "text",
                 "id": "title",
                 "label": "Text",
@@ -122,11 +131,11 @@
                 "type": "range",
                 "id": "padding_bottom",
                 "min": 0,
-                "max": 100,
+                "max": 400,
                 "step": 4,
                 "unit": "px",
                 "label": "t:sections.all.padding.padding_bottom",
-                "default": 36
+                "default": 360
             }
         ],
         "blocks": [

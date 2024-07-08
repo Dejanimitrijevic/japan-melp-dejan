@@ -16,7 +16,7 @@
           "settings": {
             "main_img": "shopify:\/\/shop_images\/Mask_Group_33.png",
             "mark": "shopify:\/\/shop_images\/Screenshot_1.png",
-            "brand_link": "http:\/\/lightly.jp\/"
+            "brand_link": "https:\/\/linktr.ee\/lightlydesign"
           }
         },
         "brand_FUNdML": {
@@ -24,7 +24,7 @@
           "settings": {
             "main_img": "shopify:\/\/shop_images\/Mask_Group_34.png",
             "mark": "shopify:\/\/shop_images\/Screenshot_2.png",
-            "brand_link": "https:\/\/littlewonders-jp.jimdofree.com\/"
+            "brand_link": "http:\/\/www.littlewonders-herb.com\/"
           }
         },
         "brand_cpRwyc": {
@@ -32,7 +32,7 @@
           "settings": {
             "main_img": "shopify:\/\/shop_images\/Mask_Group_35.png",
             "mark": "shopify:\/\/shop_images\/Screenshot_3.png",
-            "brand_link": "https:\/\/www.hautstudio.com\/"
+            "brand_link": "https:\/\/hautmens.com\/"
           }
         },
         "brand_nNBkLD": {
@@ -177,10 +177,11 @@
         "brand_BUp4Hi"
       ],
       "settings": {
+        "brand_bg": "#fdf9f1",
         "title": "BRAND LIST",
         "brand_column_count": 4,
         "padding_top": 64,
-        "padding_bottom": 64
+        "padding_bottom": 360
       }
     }
   },

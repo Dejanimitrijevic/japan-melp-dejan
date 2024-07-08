@@ -37,6 +37,7 @@
 
 .collection-hero__title {
   margin: 6.7rem 0;
+  font-size: 30px;
 }
 
 .collection-hero__title + .collection-hero__description {

@@ -49,7 +49,7 @@
   display: block;
   color: rgba(var(--color-foreground), 0.85);
   font-size: 1.2rem;
-  margin: 0 2rem 0 0;
+  /* margin: 0 2rem 0 0; */
 }
 @media (min-width: 1024px) {
   .facet-filters__label {
@@ -151,12 +151,22 @@
   outline-offset: 0.3rem;
   box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
+.facet-filters__field .select:focus-visible {
+  outline: unset !important;
+  outline-offset: unset !important;
+  box-shadow: unset !important;
+}
+.facet-filters__field .select .select__select:focus-visible {
+  outline: unset !important;
+  outline-offset: unset !important;
+  box-shadow: unset !important;
+}
 
-.facet-filters__sort:focus-visible {
+/* .facet-filters__sort:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
   box-shadow: 0 0 0 1rem rgb(var(--color-background)), 0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
-}
+} */
 
 .facet-filters__sort.focused {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
@@ -172,7 +182,8 @@
 .facets__form {
   display: grid;
   gap: 0 3.5rem;
-  grid-template-columns: 1fr max-content max-content;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr max-content max-content; */
   margin-bottom: 0.5rem;
 }
 
