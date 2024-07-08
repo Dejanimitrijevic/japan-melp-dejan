@@ -10,7 +10,8 @@
   Usage:
   {% render 'product-media-gallery' %}
 {% endcomment %}
-
+  {{ 'c-product-media-gallery.css' |  asset_url |  stylesheet_tag }}
+  <script src="{{ 'c-product-media-gallery-swiper.js' | asset_url }}" defer="defer"></script>
 {%- liquid
   if section.settings.hide_variants and variant_images.size == product.media.size
     assign single_media_visible = true
@@ -175,10 +176,12 @@
     and section.settings.gallery_layout contains 'thumbnail'
     or section.settings.mobile_thumbnails == 'show'
   -%}
-    <slider-component
+    <div
       id="GalleryThumbnails-{{ section.id }}"
-      class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
+      class="{% if section.settings.enable_desktop_slider == true %}swiper product-media-gallery {% endif %} {% if section.settings.enable_disktop_slider == false %}thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}{% endif %}"
     >
+
+    {% if section.settings.enable_desktop_slider == false %}
       <button
         type="button"
         class="slider-button slider-button--prev{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
@@ -189,9 +192,10 @@
       >
         {% render 'icon-caret' %}
       </button>
+    {% endif %}
       <ul
         id="Slider-Thumbnails-{{ section.id }}"
-        class="thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}"
+        class="{% if section.settings.enable_desktop_slider == true %} swiper-wrapper {% endif %} {% if section.settings.enable_desktop_slider == false %} thumbnail-list list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail_slider' %} slider--tablet-up{% endif %}{% endif %}"
       >
         {%- capture sizes -%}
           (min-width: {{ settings.page_width }}px) calc(({{ settings.page_width | minus: 100 | times: media_width | round }} - 4rem) / 4),
@@ -259,7 +263,7 @@
             -%}
             <li
               id="Slide-Thumbnails-{{ section.id }}-{{ forloop.index }}"
-              class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}"
+              class="{% if section.settings.enable_desktop_slider %}swiper-slide {% endif %} {% if section.settings.enable-desktop_slider == false %}thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains media.src %} thumbnail-list_item--variant{% endif %}{% endif %}"
               data-target="{{ section.id }}-{{ media.id }}"
               data-media-position="{{ media_index }}"
             >
@@ -303,16 +307,19 @@
           {%- endunless -%}
         {%- endfor -%}
       </ul>
-      <button
-        type="button"
-        class="slider-button slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
-        name="next"
-        aria-label="{{ 'general.slider.next_slide' | t }}"
-        aria-controls="GalleryThumbnails-{{ section.id }}"
-        data-step="3"
-      >
-        {% render 'icon-caret' %}
-      </button>
-    </slider-component>
+
+      {% if section.settings.enable_desktop_slider == false %}
+        <button
+          type="button"
+          class="slider-button slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+          aria-controls="GalleryThumbnails-{{ section.id }}"
+          data-step="3"
+        >
+          {% render 'icon-caret' %}
+        </button>
+      {% endif %}
+    </div>
   {%- endif -%}
 </media-gallery>
