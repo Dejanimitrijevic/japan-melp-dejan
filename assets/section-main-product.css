@@ -1289,8 +1289,8 @@ a.product__text {
   --viewport-offset: 400px;
   --constrained-min-height: 300px;
   --constrained-height: max(var(--constrained-min-height), calc(100vh - var(--viewport-offset)));
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+  margin-left: auto; */
 }
 
 .product-media-container.constrain-height.media-fit-contain {
